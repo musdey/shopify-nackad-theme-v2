@@ -1,50 +1,56 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "7d871986-74fe-4c43-a63c-d8e0930461e8": {
+      "type": "image-with-text",
       "blocks": {
-        "heading": {
+        "template--16720618389735__7d871986-74fe-4c43-a63c-d8e0930461e8-16783678102e005d68-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "heading": "nackad.",
+            "heading_size": "h1"
           }
         },
-        "text": {
+        "template--16720618389735__7d871986-74fe-4c43-a63c-d8e0930461e8-16783678102e005d68-1": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "<p>Dein pfandfreier Zero Waste Online Supermarkt<\/p><p><\/p><p>Gut zum Klima. Gut zu Dir.<\/p>",
             "text_style": "body"
           }
         },
-        "button": {
-          "type": "buttons",
+        "template--16720618389735__7d871986-74fe-4c43-a63c-d8e0930461e8-16783678102e005d68-2": {
+          "type": "button",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_label": "Einkauf Starten",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "template--16720618389735__7d871986-74fe-4c43-a63c-d8e0930461e8-16783678102e005d68-0",
+        "template--16720618389735__7d871986-74fe-4c43-a63c-d8e0930461e8-16783678102e005d68-1",
+        "template--16720618389735__7d871986-74fe-4c43-a63c-d8e0930461e8-16783678102e005d68-2"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-03-07_at_17.37.17.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "2c37973b-7bfb-4f9c-9087-96c7e923bced": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id='firstbreak' class='firstbreak'>\n<img id='rectangle39' class='rectangle39' src='data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAE3CAYAAABcjOYgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAB6xSURBVHgB7d1NVltnuujx590iIXedRsgIovRucuMyjCDKCMIZASandVp2RmBnBHG1TisRHkGcERiPQIBdeK3biWoERbWunZj93r3Fh79jMAjtj99vLWoLGbsahQrx16PnTeP9vd8jYicibcdh7G5eu7YdAAAAAABwQakK0Pkt92\/nMu+moorSzw63N9fWDgIAAAAAAM7hXQH69S\/biZx3IsVvVZDeqYL0NAAAAAAA4C+cMUC\/8ddeDtImpAEAAAAAeMMHBug3\/pmdXJYPUy7u2yENAAAAAEDtkgL0G7arf\/p+lM8fbn69thMAAAAAAPTOvAL0y6aRqyBtXQcAAAAAQK9cRYB+3bbpaAAAAACA7ltEgH7Z0XR0me7ZHQ0AAAAA0C2LDtAv5DiIFNs5FffT0z8fbq6tTQMAAAAAgNZqToB+Ux2jt8RoAAAAAIB2anKAfkmqd0Vv2RsNAAAAANAeLQnQr5jmMv+WotwSowEAAAAAmquNAfplYjQAAAAAQEO1PUC\/7ChG\/1netTMaAAAAAGDxuhSgX5J2ckp3HWAIAAAAALA4HQ3Qr9jOqdgSowEAAAAArlYfAvQLObYixW+bX\/3tfgAAAAAAMFf9CtAvTKsYvR358O8OLwQAAAAAmI++BuiXTXMq7ljRAQAAAABwuQTol9UrOsp0b\/Pate0AAAAAAOBCBOi3m0ZKW\/H0+T1T0QAAAAAAH0aAfr\/6wMJ7Di4EAAAAADgfAfrs7IoGAAAAADgHAfpD2BUNAAAAAPBeAvTFzKaiv\/\/y63sBAAAAAMArBOjLMY0c2\/HH4Y\/WcwAAAAAAHBGgL1u9nkOIBgAAAAAQoOdoO6diy3oOAAAAAKCvBOj5sycaAAAAAOglAfrqzEJ0evrnQ+s5AAAAAIA+EKCv3jRS2oqnz+8J0QAAAABAlwnQi+TAQgAAAACgwwToJhCiAQAAAIAOEqCbRIgGAAAAADpEgG4iIRoAAAAA6AABurkOIqW7DisEAAAAANqqCJpqJXK+E8uDBz\/v794KAAAAAICWMQHdHtOcijvff\/n1vQAAAAAAaAEBun2EaAAAAACgFQTo9rofzw5\/sB8aAAAAAGgqO6Dbaz2WB7+P\/7E3Hk8mwwAAAAAAaBgBuu1S3HBQIQAAAADQRFZwdMs0F4Nb3\/\/v\/\/NbAAAAAAAsmAnobhmm8vC+tRwAAAAAQBMI0F10tJZjYi0HAAAAALBIVnB03zSeHX67ubY2DQAAAACAK2QCuvuGsTz4vXqh4afxZLISAAAAAABXRIDuj1v1Wo7xo0ejAAAAAAC4AgJ0vwxjkB84pBAAAAAAuAoCdB8dHVL4wDQ0AAAAADBPAnR\/HU1D2w0NAAAAAMyJAM3RbmgrOQAAAACASyZAUxtWEfr38ZNHtwMAAAAA4JKk8f5eDnhhO54dbm6urU0DAAAAAOACTEDzutHsgML9vfUAAAAAALgAAZq3GVYfv1rJAQAAAABchBUcvI+VHAAAAADABzEBzfscreSYTIYBAAAAAHAOAjRnMawi9O8\/7+\/eCgAAAACAMxKgObMi0k\/2QgMAAAAAZ2UHNB+i3gv9n5trawcBAAAAAPAOJqD5EPVe6Im90AAAAADAXxGg+VDD2eGEjyerAQAAAADwFgI0FzGMoorQ+3vrAQAAAADwGgGai1qpPn79eX\/3VgAAAAAAvESA5lIUkX4aP3l0OwAAAAAAjgnQXJ6c74jQAAAAAMAJAZrLJUIDAAAAAMcEaC6fCA0AAAAAhADNvIjQAAAAANB7AjTzI0IDAAAAQK8J0MyXCA0AAAAAvSVAM39VhP55f\/dWAAAAAAC9IkBzJYpIP\/3yZHcjAAAAAIDeEKC5Mimnu+PHk9UAAAAAAHpBgOYqrUQx+HU8mQwDAAAAAOg8AZqrNozlwYMqQq8EAAAAANBpAjSLUEfocQAAAAAAnSZAsyjr4yePbgcAAAAA0FkCNIuT853xo0ejAAAAAAA6SYBmsQbZoYQAAAAA0FECNIu2Yh80AAAAAHSTAE0TjH7+x+6dAAAAAAA6RYCmEYqUbtsHDQAAAADdIkDTHIM8Hk8mKwEAAAAAdIIATZMMY3lwOwAAAACAThCgaZpbVnEAAAAAQDcI0DTPIJuCBgAAAIAOEKBpotHP+7u3AgAAAABoNQGaRioi3XYgIQAAAAC0mwBNU62UHxemoAEAAACgxQRoGqtIsynoYQAAAAAArSRA02wfDxxICAAAAAAtJUDTbClumIIGAAAAgHYSoGk+U9AAAAAA0EoCNM13NAW9EgAAAABAqwjQtEL5cXErAAAAAIBWEaBphSKlm6agAQAAAKBdBGjaYiX\/r4+\/CQAAAACgNQRoWiOVh9ZwAAAAAECLCNC0ycgaDgAAAABoDwGaVnEYIQAAAAC0hwBNqxQp2QMNAAAAAC0hQNM2o\/95MhkGAAAAANB4AjSt83Eu1gMAAAAAaLylgJYpIn1XXe4GAAAAANBI40eTUQwGt01A00ar48lkJQAAAACARqnD83h\/70EVnx9Un45MQNNGK7G0tFpdtwMAAAAAWLiTiefq5ujl+wVoWimnst4DvR0AAAAAwMK8KzyfEKBppVSk6wEAAAAALMT7wvMJAZq2Wg0AAAAA4EqdNTyfcAghbbUy\/r8TERoAAAAArsD48d6Nlw8XPOvfMwFNa5V\/DOoAvRMAAAAAwFzU4TmKqCeeh\/EBBGhaK0U2AQ0AAAAAl2w8mazEJ0s3o8y3qgi3EhcgQNNaqYhvAgAAAAC4FK+E55xXqvh8YQI0LZaGAQAAAABcyDzC84k03t\/LAS31NB1+8d9frk0DAAAAADiXy1y18S4moGm15TS4Xl2mAQAAAACcyfjxZDVHcSuKtBE5x2VOPL9OgKbVcpm\/CAAAAADgvcaPJqMYDG5XN0dzbM6vEKBptVTGMAAAAACAd3o5PMcVE6BptyRAAwAAAMDbjPcm67E0uBkLCM8nBGhaLaV0PQAAAACAmdnBgstLGxH5VvXpMBZMgKbt5nI6JwAAAAC0ySw8f7J0M8o6POfGNLM03t\/LAW327PCzzbW1gwAAAACAnnklPKfmDWuagKb9\/mP2VoKdAAAAAICeOD5YsN7vvB4512elNZIATevlcvB5CNAAAAAA9MBxeL4dCzxY8DwEaFovl\/mLAAAAAIAOGz\/euxFFbERLwvMJAZrWS+XiT\/MEAAAAgMvW9P3OZyFA03ppkD4NAAAAAOiIV8JzzitN3e98FgI07ZdNQAMAAADQfq\/sd27wwYLnIUDTBcMAAAAAgJZq28GC5yFA0wWt3H8DAAAAQH+drtnI+UZ0eMAyjff3ckDbPTv8bHNt7SAAAAAAoMG6cLDgeZiAphv+Y\/Yq0U4AAAAAQAN1cb\/zWQjQdEIuB5+HAA0AAABAw4wf792IIjaig\/udz0KAphNymb8IAAAAAGiAvq3Z+CsCNJ2Qyu4uagcAAACgHeo1GzkV65HSRuS80pc1G39FgKYbkgANAAAAwGK8vN9Zc36VAE0npJSuBwAAAABcEWs2zkaApiuGAQAAAABzZs3G+QjQdMb\/PJkM\/\/vLtWkAAAAAwCUb703WY2lwM6zZOBcBms5YToN6Dcc0AAAAAOASWLNxcQI0nZHL\/EUAAAAAwAW9fKhg5BzWbHw4AZrOKBxECAAAAMAHmk07Ly9tRC5vREqrwaUQoOmOXL0iBQAAAADn8MqhglEfKmjc+TKl8f5eDuiKZ4efba6tHQQAAAAAvMPptHPk9QhDjfNkAppuWVqq3x6xHQAAAADwmvHjyWoMlr6bHSpYTzszdwI0nVIOSgEaAAAAgFOzaedBjGJpcDMcKnjlBGg6pYj0XXW5GwAAAAD02ivTzilMOy+IAE3XOKEUAAAAoKdMOzePQwjpnsP07ea1a9sBAAAAQC+MH01GORXrKaUN087NYgKazimLchT2QAMAAAB02mzaeXlpIyKvV5+ODDo3kwBN5xQpfRMAAAAAdNLJtHPU086RTTs3nBUcdNLTdPjFf3+5Ng0AAAAAWm827fzJ0s0oyzo8OwOsRUxA00kf56J+68XdAAAAAKCVZtF5KVZjMLgdpwcKWrTRNgI0nVRE+i4EaAAAAIDWeWXFhgMFW88KDrrrMH27ee3adgAAAADQaFZsdJcJaDqrLMpRddkOAAAAABpnFp2Xl+qDBOtVqlZsdJQJaLrsIJ4dfrG5tnYQAAAAADRCvWIjikEVnmPdio3uMwFNl62Uy8WNsAsaAAAAYKFO9jone517R4Cm0xxGCAAAALAYs0nnpaVvosy36uhsuUY\/WcFB9zmMEAAAAOBKjCeTYXyytBE5j6Le60zvmYCm+wb5djiMEAAAAGAu3ojO2bwrL5iAph9MQQMAAABcGpPOnJUJaPphkMfVf34RAAAAAHwQk858CBPQ9EYZ+Yf\/+uq6AwkBAAAAzuj0IMGcb1SfDgPOSYCmTw7i2eEXm2trBwEAAADAG8aTyUosxWpOxXpKaSNSrARcgBUc9MlKLA\/qAwl\/CAAAAABmZtH5o8F6FZu\/qT6trysp4HKYgKZ\/HEgIAAAA9NxLqzVG4RBB5kiApo+m8exwzSoOAAAAoC\/eNuUccAWs4KCPhlZxAAAAAF32yi7nIl0PU84siAloequM\/MN\/fXX9bgAAAAC03ElwPl2rkavbppxpAAGaPjs4XsUxDQAAAIAWqYLzMD4ajHLk1dmEs+BMQwnQ9J190AAAAECjzWLz8mA1l3lUxebPq9g8EptpCzug6bthfDz4qbpuBgAAAMACnYTmiDoy59VIabW6Dk9icxWfj74wBbSGCWiopXRn88trPwYAAADAHMx2NEcVkuvAXMZKmfKwqENzimHE6Qd0jgANx3LKN77\/8vq9AAAAAHjNaUA+sbQ0nF2rkDy7FunTMpefpRwrKaVPj6aWU\/Vnuf47w4CeEqDhZeXh2ubXazsBAAAAnMtpoP2o+igGw3rK940oWztaJ3EcctPKcaB9VfX1H7jjeBqXYxjApRCg4VUHVYT+VoQGAACAV832E9dxOQarL62PqCPx6gWCMdBxAjS8aRrPqgi9tjYNAAAA6JnZJPPyYPSug\/AAzkOAhrcToQEAAOi8WWxeitUYLF2PyKOop5mtnwAukQAN7yZCAwAA0Ckn0825zKNUFN9U0Xk1AOZIgIa\/No3y8D\/thAYAAKCtxo8mo1ha+ibybMJ5FABXSICG9zuoPjY3v\/rb\/QAAAICGO12rUQw2qk\/X7W4GFkmAhrNK6c7ml9d+DAAAAGgY0RloKgEazufu5ld\/+yEAAACgAer1GjkV6ymlDdEZaCIBGs7P4YQAAAAszGza+ZOlm5HzjerTYQA0WBHAeQ1jefDglyePNwIAAACuSD3tPN7fe1D9TvqvKj7fCfEZaAET0HARObbij8MfTUMDAAAwD7Np548G61FEPQQ1CoCWEaDh4qY5FXe+\/\/LrewEAAACX4HTNRplv2e0MtJkADZfFNDQAAAAXJDwDXSNAw2VL6c7ml9d+DAAAADgj4RnoKgEa5sNaDgAAAN5LeAa6ToCG+RKiAQAAeKvx\/u7NyOmO8Ax0mQANV2MaRbob\/+\/5b3ZEAwAA9Nv40WQUg8G4ujkMgI4ToOGq1YcVlune5rVr2wEAAEBvjCeTYSzPwvMoAHpCgIbFmVYPwbvxzFQ0AABA142fPLptzzPQRwI0NMN29XC8H+Xzh5tfr+0EAAAAnTB+PFmNYmkckVcDoIcEaGieaeQqSKf4LZ4dbm+urR0EAAAArTObes75TgD0mAANzbedy7ybirRdBekd6zoAAACaza5ngBcEaGibHAeRYqfM+WGR0k6Uh1NrOwAAAJphvL97M3K6Y9czwBEBGjqjitGRp7nM\/0xF8Xscxm6k5wfxZ0yt8QAAAJiv8WSyEsuD29XNWwHAKQEa+mA2NZ2m1Y2D6va0jPzP+u4iV\/fVH7Xnz+vrgVgNAABwPkcrN5Z+ddAgwJsEaOBNR2s+qhCdDmbR+ui+aX05jdep+FeU+d9Hf3YcsY8mrmdfb1c1AADQB+NHk1EUg1+t3AB4OwEamK\/TmH0UsCv1FPZBzvnfubp\/FrLrqH1Yxe7jgC1eAwAAbTDb9xzpbgDwTgI00ExvWRtyGqvLw6nd1gAAwCJVPeWnsO8Z4L0EaKC9jqard6pbB2XOu0VKO7NJ6ufPd8RpAABgHo4PGxxXN9cDgPcSoIGOqmJ05DpMP5yF6fJwuvn12k4AAAB8IIcNApyfAA30x\/HE9CxKl8W2SWkAAOCsjuLz4EF1cxgAnJkADfRc2sll+TAVaTueHW4L0gAAwOvEZ4APJ0ADvGr7ZEJ689q17QAAAHpNfAa4GAEa4N2mkWM7ynRPjAYAgP4RnwEuToAGOIt6f3TEfTEaAAD6QXwGuBwCNMD5HU1G58O\/b369thMAAECniM8Al0eABriQtJNTupue\/vmbAwwBAKD9xGeAyyVAA1yGkxUdfxz+WIXoaQAAAK0jPgNcPgEa4PJt51Rsff\/l1\/cCAABohSo+r1TxeRLiM8ClKgKAyzZKudyqXuD7\/ZcnjzcCAABovuUlk88Ac2ACGmD+ppHSVjx9fs96DgAAaJ7xk71x5LgRAFw6ARrgKuXYsicaAACaY\/zk0e3I+U4AMBcCNMAiCNEAALBw4jPA\/AnQAIskRAMAwEKM93dvVlnkbgAwVwI0QBMI0QAAcGXGjyerUQwmAcDcFQHA4qW4EcuD38f\/2BuPJ5NhAAAAczF7vl0Mfg0AroQJaIAmSulOPH1+z0Q0AABcnll8Xh48qG4OA4ArYQIaoInqg1CqJ8a\/PHm8EQAAwOVYXqonn4cBwJURoAGaa5hyuTXe3\/tdiAYAgIupnlf\/FJFXA4ArZQUHQHtsx7PDTWs5AADgfMZPHt2evcsQgCsnQAO0TY6t+OPwRyEaAADer+oe69XFoYMAC2IFB0DbpLhhPzQAALzf7NDBHOMAYGFMQAO02zSeHX5rGhoAAF41i8\/Lgwfh0EGAhTIBDdBu9ZPq38f\/2BvPnmADAAB1fF4RnwGaQYAG6AJrOQAA4IXlQb12YxgALJwADdAdw5TLrfH+3q+moQEA6Kvxk0e3q8t6ANAIAjRA96zP1nIcPfEGAIDemD0HzvlOANAYDiEE6DaHFAIA0AtV36innn8NABrFBDRAtw1NQwMA0HXjx5PVyDEOABrHBDRAf5iGBgCgc2bnnywPHoRDBwEayQQ0QH+YhgYAoFPEZ4DmMwEN0E+moQEAaLUqPq9U8XkS4jNAo5mABugn09AAALTWUXxeMvkM0AICNECf5XxnvL\/3YPbWRQAAaIvlwa\/Vk9nVAKDxBGgARvXevF+ePN4IAABouPGTvXHUz2EBaAUBGoDaMOVya\/yPvbFpaAAAmmoWn3PcCABaQ4AG4IVUPZlfHjwYP3o0CgAAaBDxGaCdBGgAXjeMQX7ggEIAAJpCfAZorzTe38sBAG83jWeH326urU0DAAAWQHwGaDcT0AD8lWEsDyY\/7+\/eCgAAuELjyWRlvL\/3QHwGaDcT0ACcTY6t+OPwR9PQAADMWx2fY3npQfUkdDUAaDUT0ACcjQMKAQC4AlV8nr0LT3wG6AYBGoDzcEAhAABzM348Wa2HHqJ+3glAJ1jBAcCHckAhAACX5pcnuxupTHcjxUoA0BkmoAH4ULO3Rv7y5PFGAADABdTvsEs5bYnPAN1jAhqAi3NAIQAAH2B22OAng5+q55M3AoBOMgENwMWdHFBY7+wDAIAzOD1sUHwG6DQBGoDLMoxiMHFAIQAA7zPe370ZH1fx2WGDAJ1nBQcA8+CAQgAA3mDlBkD\/mIAGYB5mb6f8eX\/3VgAAQGX8aDKycgOgf0xAAzBfDigEAOi12dTz8qBe02Y4AaCHTEADMF\/HBxT+8uTxRgAA0CunU8\/iM0BvmYAG4OocTUP\/sLm2dhAAAHTWeDKpV7L9VN1cDwB6zQQ0AFfnaBp6Mn70aBQAAHTS+Mmj2\/HxbOpZfAbABDQAC3M3ns12Q5uGBmAhZhOaH8VKFINhlPU1fVrm8rO3fW2Rin9Fmf8dOU1ndzx\/vuNnGLxqtm5jMBhHfSA1ABwToAFYpGkcps3Na9e2AwDm5HgVwGqZ82oR6fNIMYpcBedUfVxY2onI0+rf3i3KYluYpo+Ow3N9yOAoAOA1AjQATVBPQ\/+9+oV9GgBwAVVsXqli8yiXeZSKdL0KzauXE5rPZVr9927nothOT\/986OcbXSU8A3AWAjQATTHNqbjz\/Zdf3wsAOIdZBFta+iZyHkUjQ1jayWX5MOXivnf90AX1uwryR8Wd6kWejQCA9xCgAWiWHFvxx2w39DQA4B3q6Fy9cLmeUhXArn7C+SJm09FRpntiNG0jPAPwIQRoAJrINDQAb9Wxt\/zPft5Z00HTzVbbfLJ0M3K+EwBwTgI0AE02jWeH3\/qlHIAe7Jq9H4fp76aiaZLT8FzmWy17pwEADSJAA9AGDikE6Kn6Lf+xPBhHfw45MxXNwgnPAFwmARqAtrCWA6Bnxvu7NyOnOz0NYEe7op2LwBWy4xmAeRCgAWgbazkAOq6HU89\/zQG9zNnxipub1c31AIBLJkAD0E5+GQfopJ5PPf81P\/u4ZD3YrQ5AAwjQALRbqiLF0+f3\/DIO0G6mns9lOw7Tjw4s5EMJzwBcJQEagC6wHxqgpU4PO8v5TnBeQjRn5mBBABZFgAagS4RogBY5nsKsp56HwUUI0bzT+PFkNUdxI6W0ITwDsAgCNABdJEQDNJh1G3MjRHPKmg0AmkKABqDLhGiABrEC4MoI0T3lMQZAEwnQAPSBEA2wYOP93ZuR0x1R7EptVz\/\/tvz86z7TzgA0mQANQJ9MI6WtePr83uba2jQAmDt7nhvBC7EdVD+2qv9d1+12BqDpBGgA+inHVvxx+KMQDTAfJjIbSYhuudMVGzmPwmMLgJYQoAHou\/txmP5uTybA5RCeW2EWotPTP3+rXog9CBptFp2XlzaqV8\/Xw+MKgBYSoAHgyMkv4w9NRQOcn\/DcStPIse0dQc1TRedhFZ2\/E50B6AIBGgBeV6\/nKNM9U9EA7yc8d4SffQt3utO5SFV4tjMdgO4QoAHg3RxaCPAO48d7N6KIjRCeu8Y7gq7IS1POo+oFgJGDBAHoKgEaAM5mu\/qFfMsv5ECfnR6AVuZbYlkP1FPRKX7b\/Opv94MLmwXnjwZ1aP6m+hiFKWcAekKABoDzu1\/F6PsObwL6QnjuvaNd0VZ0nNnsMbMUqzFYuh45r1Z3rXvsANBXAjQAXIzJaKCzjnfS3khF2gg4chSjU\/wWzw63vRD7lticUhWcZ9EZAAgBGgAu03b1o\/V+lM8fbn69thMALeVgQc5hu8z5YVEW212fjj7a2TyownL6PJflF9ULM59Xd9eheRgAwDsJ0AAwHybEgFaxZoNLsp3LvFu9gDFJh3\/utuUF2dn3f1Tf90tLw0h5GEX69GiaefZYWK1+pq94XADAhxGgAeBq9GZCDGiX4zUb6ymlDYGN+UhVhM4HdZjOKQ6KnKoXaauP2vPn9fXgIi\/UnsbjEx9Vt\/PS0ed1TK5VQbnM5WepCsnV9\/qnR9\/rqfqzvCIuA8B8CdAAsBinQbr65XvHhDRwlWbBbnlpo4pv62HNBgAAcyRAA0AjpJ3IeScXxXab3rIMtMcsOn80WI8iNiLHqolPAACuggANAM0126OZiuL3OIxdqzuA83pl0ll0BgBgAQRoAGiV2R7NaZnzbpGq2+Xh1LQ0cOIoOA9G1YtXo1Sk76q7hgEAAAskQANAJ7wZpuPPmNotDd1WBedhfFQF58irqSi+qf5\/YDUAAKBBBGgA6LIcB5Fip7pOy8j\/FKehvWaxeXlQBeb0efXgHlWP65GVGgAANJ0ADQB9dRKnIw6OJqeLf9W7piM9PxCoYXGODgusV2cMVo8mm9N1+5sBAGgrARoAeLtZoE7TerVHLvM\/c4qD2QT1YTqoI7Xd03AxL08057L8ogrNn1d31ys0hgEAAB0hQAMAH+5FpD54seaj+Ff1+T9nofr58+rP4sA0NX10OslcDIYiMwAAfSVAAwBXZXr8Ucfqgzdi9dHqjzpWTwMa7ujwv1iZxeUyVsqUh0W9m\/loTcZq9T2+YmUGAAAI0ABAEx3tp66npqfHn09zzv8+WgNSResy\/ztyOvoz4ZpLchqV81IVj\/MwivRpmcvPXoTlNKy+GeuoPAwAAOBMBGgAoGumr1zz0bWeuK6vpwG7qAJ3PXldO47YYV1I680icu3lkFwpj6+zmFxLdUROK7OgbFoZAADmRoAGAHibF1PYtelL95\/ePonatdOwffp1afrKv\/cicp\/oXeye7USO10Lv0tLw9PagisHliz8\/ica103BcS6cTyEdXARkAABpLgAYAaJbp2++up7XzWYP1bM92XMRR0D1D1D2eIn67YQAAAL22FAAANMnw7Xefc2YgxRUxywAAALxbEQAAAAAAMAcCNAAAAAAAcyFAAwAAAAAwFwI0AAAAAABz8f8BABLjAgv7fHgAAAAASUVORK5CYII='\/>\n<\/img>\n<img id='rectangle41' class='rectangle41' src='data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAADJCAYAAADVY5X9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAABZ0SURBVHgB7d1dWhtXtoDhtQtychl6BFFfOnECjKDtEbR7BG15AklGEHsEx55Ay4wgeASRR4CcdrovUx5BlLvjH9U+VSX+TDAGLKGS9L7PQ5ABk6Rj1PDVqrXT4D+\/\/BYRvYDLKQNg9soAmL1x5PoFYIZyzn\/k5LkFmL0ipzJgBW0GXE0vAGavFwDzkAJgplJKnlqA+fDkwooqAgAAAAAA5kCABgAAAABgLgRoAAAAAADmQoAGAAAAAGAuBGgAAAAAAOZCgAYAAAAAYC4EaAAAAAAA5kKABgAAAABgLgRoAAAAAADmQoAGAAAAAGAuBGgAAAAAAOZCgAYAAAAAYC4EaAAAAAAA5kKABgAAAABgLjYDAABgOZWR8zhSql\/HuIr8qkjxe1Tpj\/a9eVK2r1OM4239cp7N6B0\/Thu9KPIXVY6\/FJG+rH9fr\/78W\/Xn3wkAAK5FgAYAALprGphHdWAuI+VRvKtexSRG9XvG\/d3dcXy68jIfNHh5sFP\/M2zFRrGdI3ZTjm1hGgDg49LgP7\/8Vr\/uBQAAwCJNY\/MwV\/lVqqphE5rryFxGhw3+fXCnidL1j1Z36n+BOkinXgDLoGz\/On3eGbcXuQ41d1Oc\/sAip\/KiT1Sl3Hvv45s7KBqpvmgV9cv0TormcS8A1pAADQAALEqzOmNYvzyPt5Nh12PzZbST0rGxUxeov9fR6c5hdALm7SgkT59XypzzH6mI39qVPNVkXH9NloereGZ198S1DQ4Oeu36n+auis3iy1zFX1PRRusmVu943gBWjQANAADcjMMJ5\/rBMF5Xz1YhOH9MMyGdN4r7KeJvpqPh2qb73iON3gvLzZ73d+3k8sKj8izVgXorPqs7TRW9aqPYKVLarv\/9e9b+AMtKgAYAAOapzFV+lnK13\/9mdxhrTIyGc5xMLo+ODxNtVl4cxuV1uFB1Fe1dFqfDtNU\/wBIQoAEAgFkb1lHpebypnopH5zuJ0emfAavtz9PLzWGi05UY5SpNLi9KOzG9GTtVUdypo\/TfrPEAukaABgAAZkF0vobprfYb9yLl79xez9Jpw3IdklMq28NDj1ZjxGTU7Fv2XLA4R\/voc5HvpBzbnl+ARRKgAQCA62omG\/dE59loglEuiu\/rWPR304t0TFm\/jNrIHGl0GJhNLy+RwX8PejHZuNMGaWuAgBsmQAMAAJeX8zjn2LPTeX6OQlEU+UeRiAWoLyzFMFIexaR6Ee9iJDSvnnYNUCrupaK+4BWpFwBzJEADAAAXmx4SVseoySPR+WYNfjm4F5sb39UP7wTMxzBX+UWqqmFMYig2r5\/27oso7ovRwLwI0AAAwIcM6\/q8H6+rPVFqsZqp6JyLhw4tZAamwTlX+6abOcsBqcA8CNAAAMCJ6aFiT6Kqhqadu+ckRNvhyiW1X9NpP3I8j7eTfcGZy7AKCJglARoAANadFRtLZxqH4l4UxXfiEOcY1l\/Xz11IYhYGL3+5H0U0E9F3AuAaBGgAAFhfQys2lt80DplS5Pjr+Vn99VwGzJj1HMB1CdAAALBOjlZsvKmeilSrRYheS0MXkbhpdtIDVyVAA8Bsle\/9anpb+8kPhPnk\/TnnP3KK9n1Fit+jSn+cfNzk5PO8O\/M5a7OMRoODg957b\/gstup\/zq2Tf5b6cbEx\/XWRv6hy\/KV5mOq3p5S+iNR+7NHH9868Brqgfi7KOfaaQ8fcjr\/63C6\/8oaiM13QTETHRjFw0Qv4GAEagC4p\/\/SWswH3+O3nfOzxbzkJu2f9KfT+6TefCr9Hms\/19tzPN\/aD38XauH0UtA9DdpVyr3lfEenLU\/G6V\/+H26r\/W28FMBui89qbxqGNH0OIXgXTnc5vqse+96Br3H0BfIwADcDlvR+Dy+nbpq\/fm+bNqTz5PR+e5HXrN+dpo\/Xm4fcmaaPXBOt22rqog\/VRrPa9C5xPdOYcbpdfUkfrchwkyJIY\/PriYf2zwo8BcIYADbDeysOoXL+OcRX51fGEcDUZt5O\/h9FYLKZr6lC9FZ81k9N1lD4M1YdT1dNp6ub7GxPVrIcyV\/mZ6MzHCNFLwEUklpznGeA8AjTAKppOzJRNWK6jxKtUxG9tVG6mkadB2eoI1sJHI3VKOwHLZnrhcHS4A\/aZC4RcVROIYhL3oii+c8t8Bxx9TU8mj+rv00a+R2MVWMsBnCZAAyyjo8AcadSsvkj163ZieRJ1kBCX4SqOV37UkbraKHYO131sm6KmY4b1BcUXzVSkQMUsiUQLNXSYIKvMNDRwRIAG6Layfhm1U8xNZI7JKN5G6YcUuDntFPVm7LRT1JvFl7mKvwrUzNXhNKTgzE1qDizMG8V9oWjuhqIz68aFLkCABuiGZgfzMFIexbvqVTPJ7JZqWA6nA\/WfJqit+OAycv3c31xkbP4\/oKqe92\/vjgIWZLqeY+OOWDRTw\/rr\/Hm8qZ76\/o51ZRoa1psADXCTTk+1HU40Cw2w2i4M1Cao100Z7mphiZiK\/iSiM5xj8OuLh\/X3Pj8GsFYEaIB5mcbmYRsaqmpoqhk4zwdWfHxZv2urfh7ZEaiXzPS5vwnKQjMr42QqOpoQfSf4kKHDQeHj2ueUXPzsLgtYHwI0wCycnWx+Oxn6wQOYlQ8clDiN1NPv43rBzbngIFjP\/aw6MfqU9rkg7dfPzc\/r7\/32XWSCy2suwOfPi8fusID1IEADXM\/Jzmb7OoEOOI7UjbTRq1LuFVFH6tRGaqH6sk4mmJvn+bINzEX81u7nL+q3mWSGY6di9N\/rr507K3\/HxuHAQTvl7Ps\/mAkrOWA9CNAAl1PmKj8z3QysgrOxOor8RZXjL2eCdaN3eJjiskel8vh1nj6uIr8qUvweVfoj8qSMd+3bx+IyXF+7MzoV99o996swHX24Tq1+MIxJ9aL\/ze4wgJlrnjtioxhYyQGrS4AGOE\/Oo5zj+eHu5qEgAXAYrhubp753bAJ24zBiH7+5WROS0hd\/+iTvB+4Py8fR+D1NOD56fByQ23dM6lAU05e30T5nu1gIi3O0374qijtFSn9bgp32ZZze3W7gAG6UvdCw2gRogKnTE852+AEAzNjxoasbxXbkVAfp9i6LmwvT5+1vd0godEb7HPH5xqB+eC+AlSJAA+vp\/UNjTLgAACzQ4OXBTnPQavuyWXzZ3FHx3p0U6YM\/s47r33Mcj4\/ukihyKts3WLEDS8deaFg9AjSwToZ1eH4eVTW0ww8AAKCbRGhYLQI0sLpOn1T+utoz9QIAALAcBi8P7kcq\/ncFDkOGtSdAA6vlaLVGNdmLdzESnQEAAJZTu56nKH5yOCEsNwEaWH6iMwAAwEoa\/PegF7n4WYSG5SVAA8tsWL88idftIYKiMwAAwAoSoWG5CdDAshna6QwAALBe2ghdFT9FSjsBLBUBGui+dsVGPImqGva\/2R0GAAAAa2dwcLAV\/1P8LELDcikCoLuGMZncjTfVX\/tfbz8UnwEAANZXexfsm+puVHkvgKWxGQBdcjTt\/KZ6bMUGAAAApx3+nHh\/8PJFRJH+GUDnCdBAVwzb3c5v7HYGAADgYv3b2\/f\/9fLFOBXpuwA6TYAGFm0\/JpMn1msAAABwFQ9ub38\/+PXFOFL6MYDOEqCBm2fNBgAAADPQnBdUR+gQoaG7BGjgBuUycuwJzwAAAMyKCA3dJkADN2EYk8kjazYAAACYBxEaukuABuZJeAYAAOBGiNDQTQI0MA\/CMwAAADdOhIbuEaCB2UnxNKIOz7d2ywAAAIAFEKGhWwRo4NPkPM459tJG9Vh4BgAAoAtEaOgOARq4njo81399Em+qxw92d8cBAAAAHSJCQzekwX9++a1+3QuAyzgVnvvCMwAAAB03eHlwP4qNQQALYQIauBzhGQAAgCXUv737tI7QIULDYgjQwMWEZwAAAJacCA2LYwUHcD7hGQAAgBVTR+idSMXPkdJWAPN12JYEaOB9wjMAAAArTISGuRvGZPKo\/83usPmFAA0cymVO8fDBre29AAAAgBU2+O9BL3IdoSP1ApiV\/To8PzkKz0cEaGBYvzzpf\/XtfgAAAMCaEKFhBi5xJ70ADevrvdshAAAAYN2I0HBtw2jC8+vJ8GMrXAVoWD\/CMwAAABxqI3RV\/BQp7QTwYTmPc469lKv9q3QlARrWwdETxEb1uH9rtwwAAADg2ODgYCs+3xjUD+8FcNawjkv78bra+9i083kEaFhll9jDAwAAAEz96+WLx6lI3wWsu2tOO59nM4BVNGyvTL253pUpAAAAWEcPbm9\/P\/j1xThS+jFgPQ2PmtKDGTUlARpWi\/3OAAAA8An6X28\/HLysI3SR\/jdgHcxw2vk8VnDAsrNmAwAAAGZu8PJgJ4ripzqf9QJW0zCapvR6MpxnUxKgYXmZdgYAAIA5Gvz3oBe5+FmEZoWUkfPeTQ4yCtCwTEw7AwAAwI0aHBxs5c+LxynSPwOW0ZxXbHyMHdDQdW10TvtRTfZMOwMAAMDNOhwAuz\/49UXpcEKWRtOTUho1d8\/Huxg9WOAgowlo6K5he+ro62rPtDMAAAAs3uDfB3dioxhYyUGHDbvWkwRo6Jah6AwAAADd1e6FroqfIqWdgG4YRs7Pu7qyVYCGxRuKzgAAALBcBr++eGglBwt0dJjg07onldFhAjTctKMdPKIzAAAALLXBy4OdKIqfrOTghkyjc1UNl+mcMAEabsLRQYKTybOYxFB0BgAAgNUwODjYyp8Xj1OkfwbM3lJG59MEaJiH01POk+rFsj5BAAAAAJczePnL\/Sjyj6ahmYGjnc6dX69xGQI0zMJhcM5VfpFytR\/vYmTKGQAAANZLc0BhzsVD09Bcw3BV17UK0HA9ZeT6iSHlUTPhLDgDAAAAR5oQHbn42TQ0HzQdZhxGFc\/i7WR\/lbuSAA0XaXc317E50khsBgAAAK7CWg7OKHOVn63b3fMC9HorP\/D4yDhy\/ZJiq368FR\/WO36U81Z99eaij+2W6dWmaWTOUVaRXxU5lRGTUbyN8Srs2QEAAAAWx1qONXb6jLDX1bN17UwC9Ko5CaqjJh4fB9VqMo6ijqw3HFUHBwe99sFndcDOpyJ22ugdPaxSPn6c6o9JKX3x3idJV\/jzmd8P6c2\/f\/N6GpWbN5z871D\/amySGQAAALgJQvTaWMsp54sI0Mss59Hxaoh31auYtH+oywAAAACgk4ToFXO0yznycJ2nnC8iQC+Ldhdx2m9jc1U9j7dRuoICAAAAsJyE6CV1eq3GpHrR\/2Z3GFxIgO4qV08AAAAAVt5JiI6\/OaywgwTnTyZAd0n9Bzrn2Gt2xPjDDAAAALA+BgcHW\/HZxr0o8o9C9AKdHgoVnGdCgF400RkAAACAUwb\/PriTN4r7pqJvQM6jus09T805a28nQ1sIZk+AXpz6KsrkkegMAAAAwIcMfjm4lzeLeynH3yOlreBTlJHrJtecsTapXsS7GDljbf4E6JvUHiQYT+JN9dgfbgAAAACuwmT0lYjNHSFA3wzTzgAAAADMzODlwU4URROi70TOd9Z4OrqsX0a5yq\/aNRoxGcXbKMXm7hCg50t4BgAAAGDu2iAdGzs58k4q0nb9pjuxKqZbBco6ZY6qyK+KnEqheXkI0PMhPAMAAACwUG2UrqJXbRQ7RWqj9FYdc3c6OC1dtpE5pbKdZC7it6jSHyLzahCgZ0t4BgAAAKDz2jid6yCdNnpR5C+qHH8pIn0ZKZo4PQ3UOW+9F6vP\/nr6tiYcnw3E5eHrcf33GOec\/8gpxkWK39uwnCdl\/fcZ13F5XMflMlhpm8EsCM8AAAAALI3+7d1RwA0QoD9FfYUnF\/H9g1vbewEAAAAAwHuK4Hqq\/CTeVH8VnwEAAAAAzmcC+sryKKqq7zYFAAAAAICLCdCX1S5Uj0f9r7YfBwAAAAAAHyVAX0oeRVH9o3\/LqZwAAAAAAJclQH9MlZ\/0b29\/HwAAAAAAXIkA\/UG5jEnV73+zOwwAAAAAAK6sCM4zjFTdFZ8BAAAAAK7PBPRZOT\/qf739MAAAAAAA+CQC9JGcx5FSv47P+wEAAAAAwCcToFu5jKK627+1WwYAAAAAADNhB3Sz7\/l1tSs+AwAAAADM1npPQFf5Sf\/29vcBAAAAAMDMre8EdHPYoPgMAAAAADA36zcB3Rw2mKsf+rd3nwYAAAAAAHOzXgF6Gp\/v1vF5FAAAAAAAzNUaBehcRlHHZ4cNAgAAAADciDXZAV3H5yQ+AwAAAADcpDUI0OIzAAAAAMAirHiAFp8BAAAAABZlhQN0HsXrald8BgAAAABYjBUN0G18vtvf3R0HAAAAAAALsYIBWnwGAAAAAOiCFQvQ4jMAAAAAQFesUIBuDxz8h\/gMAAAAANANKxKg2\/h814GDAAAAAADdsQIBWnwGAAAAAOiiJQ\/Q4jMAAAAAQFctcYAWnwEAAAAAumw5A3TO46iqf4jPAAAAAADdtRnLKKV+\/+vdUQAAAAAA0FlLOAGdf+h\/9e1+AAAAAADQacsVoHN+1P9q+3EAAAAAANB5yxOgq\/yk\/\/X2wwAAAAAAYCksS4De79\/e\/j4AAAAAAFgaS3AIYS7jddUPAAAAAACWSscnoOv4nKq7\/d3dcQAAAAAAsFS6G6BzHrfx+dZuGQAAAAAALJ3uBugUj8RnAAAAAIDl1c0AnfOj\/lfbjwMAAAAAgKXVvUMIUzyt4\/PDAAAAAABgqXUsQOcy\/q\/6IQAAAAAAWHodWsFRx+fm0MHd3XEAAAAAALD0uhOgJ1XfoYMAAAAAAKujGwG6OXTwm91hAAAAAACwMha\/A9qhgwAAAAAAK2nBAdqhgwAAAAAAq2pxKzhyHjt0EAAAAABgdS0sQOcivnfoIAAAAADA6lpMgM750YNb23sBAAAAAMDKWkCAzqP+1w4dBAAAAABYdTccoHMZqfpHAAAAAACw8m44QKcf7H0GAAAAAFgPNxegc37U\/+rb\/QAAAAAAYC3cUIDOpb3PAAAAAADr5QYCdLv3+W4AAAAAALBW5h6gc4qH9j4DAAAAAKyf+QboKj95cGt7LwAAAAAAWDtzDNC5jLfVwwAAAAAAYC3NL0Cn6m5\/d3ccAAAAAACspfkE6Jwf2fsMAAAAALDe5hGgh\/2vtx8GAAAAAABrbTNmKpeRqn4AAAAAALD2ZjoBnVM8tHoDAAAAAIDG7AJ0iqcPbm3vBQAAAAAAxMxWcOQyonoUAAAAAABwaCYT0FZvAAAAAABw1qcHaKs3AAAAAAA4xyeu4LB6AwAAAACA833iBHT6weoNAAAAAADOc\/0J6BRP+7e+3Q8AAAAAADjHNQO01RsAAAAAAFzsWis4coqHVm8AAAAAAHCRqwfoFE8f3NreCwAAAAAAuMAVV3BYvQEAAAAAwOVcaQLa6g0AAAAAAC7r8gHa6g0AAAAAAK7gkis4rN4AAAAAAOBqLjUBbfUGAAAAAABXdYkAnUurNwAAAAAAuKqPB+hU3Q0AAAAAALiiiwN0zo+s3gAAAAAA4DouCNC57H+9\/TAAAAAAAOAaPhigm4MHAwAAAAAArun8AJ3iqYMHAQAAAAD4FH8O0DmPIyaPAgAAAAAAPsF5E9BPHDwIAAAAAMCnOhOgHTwIAAAAAMBsnAnQ6YcAAAAAAIAZ2Dx+lOJp\/9a3+wEAAAAAADNwagLawYMAAAAAAMzONEDn\/MjBgwAAAAAAzNTgP7\/8HAAAAAAAMGNFTKzeAAAAAABg9v4fGFGVj9eCb6wAAAAASUVORK5CYII='\/>\n<\/img>\n<div id='ellipse12' class='ellipse12'>\n<\/div>\n<div id='ellipse10' class='ellipse10'>\n<\/div>\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text": {
@@ -53,26 +59,49 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "So funktioniert's",
             "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "heading"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 0
+      }
+    },
+    "34534337-9554-426e-a512-af864c0661d5": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16720618389735__34534337-9554-426e-a512-af864c0661d5-16783678102e005d68-1": {
+          "type": "text",
+          "settings": {
+            "text": "<ol><li>Bequem und einach bestellen<\/li><li>Klimafreundlich LIefern lassen<\/li><li>Neue Bestellung annehmen und alte Behälter zurückgeben<\/li><\/ol>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--16720618389735__34534337-9554-426e-a512-af864c0661d5-16783678102e005d68-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-03-07_at_18.03.26.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_collection": {
@@ -80,132 +109,230 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "background-1",
+        "full_width": false,
         "show_view_all": false,
-        "swipe_on_mobile": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 28,
         "padding_bottom": 36
       }
     },
-    "collage": {
-      "type": "collage",
+    "17a537bf-b558-46fd-b961-df406101b53c": {
+      "type": "rich-text",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "template--16720618389735__17a537bf-b558-46fd-b961-df406101b53c-167836866817fbb33f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Erfolge",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--16720618389735__17a537bf-b558-46fd-b961-df406101b53c-167836866817fbb33f-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "45513cc0-65a7-42cc-92c2-ab9e9b4c3d90": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16720618389735__45513cc0-65a7-42cc-92c2-ab9e9b4c3d90-16783678102e005d68-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Plastik gespart: 231.141 Verpackungen<\/p><p><\/p><p>CO2 gespart: 13.413 kg<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--16720618389735__45513cc0-65a7-42cc-92c2-ab9e9b4c3d90-16783678102e005d68-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/glas.jpg",
+        "height": "medium",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "96f55da3-d44b-410c-b40c-eae69e814da4": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16720618389735__96f55da3-d44b-410c-b40c-eae69e814da4-1678368781f3d7fefb-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Schon gehört?",
+            "heading_size": "h1"
+          }
+        },
+        "template--16720618389735__96f55da3-d44b-410c-b40c-eae69e814da4-1678368781f3d7fefb-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Abonniere Jetzt unseren Newsletter und sichere dir 10€ Rabatt!<\/p>"
+          }
+        },
+        "template--16720618389735__96f55da3-d44b-410c-b40c-eae69e814da4-1678368781f3d7fefb-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--16720618389735__96f55da3-d44b-410c-b40c-eae69e814da4-1678368781f3d7fefb-0",
+        "template--16720618389735__96f55da3-d44b-410c-b40c-eae69e814da4-1678368781f3d7fefb-1",
+        "template--16720618389735__96f55da3-d44b-410c-b40c-eae69e814da4-1678368781f3d7fefb-2"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "3d18d0c6-8ab1-49ef-858d-f70e7071e7aa": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16720618389735__3d18d0c6-8ab1-49ef-858d-f70e7071e7aa-167836866817fbb33f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Jung. Brutal.                            Gutaussehend.",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--16720618389735__3d18d0c6-8ab1-49ef-858d-f70e7071e7aa-167836866817fbb33f-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "a1a28344-444a-4790-8583-0a6afdc9ad5f": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hast du Fragen oder Probleme? Dann kontaktiere uns einfach telefonisch oder per Mail!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "06603556067",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-1",
+        "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-2"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1283ac75-0d88-4b44-9400-3fe8c6829e5f": {
+      "type": "collection-list",
+      "blocks": {
+        "template--16720618389735__1283ac75-0d88-4b44-9400-3fe8c6829e5f-16783692339462750b-0": {
+          "type": "featured_collection",
           "settings": {
             "collection": ""
           }
         },
-        "product": {
-          "type": "product",
+        "template--16720618389735__1283ac75-0d88-4b44-9400-3fe8c6829e5f-16783692339462750b-1": {
+          "type": "featured_collection",
           "settings": {
-            "product": "",
-            "second_image": false
+            "collection": ""
           }
         },
-        "collection-1": {
-          "type": "collection",
+        "template--16720618389735__1283ac75-0d88-4b44-9400-3fe8c6829e5f-16783692339462750b-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "dab7e1ad-6150-4ec3-ae46-19f3b40992cf": {
+          "type": "featured_collection",
           "settings": {
             "collection": ""
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
+        "template--16720618389735__1283ac75-0d88-4b44-9400-3fe8c6829e5f-16783692339462750b-0",
+        "template--16720618389735__1283ac75-0d88-4b44-9400-3fe8c6829e5f-16783692339462750b-1",
+        "template--16720618389735__1283ac75-0d88-4b44-9400-3fe8c6829e5f-16783692339462750b-2",
+        "dab7e1ad-6150-4ec3-ae46-19f3b40992cf"
       ],
       "settings": {
-        "heading": "Multimedia collage",
+        "title": "Beginne Jetzt deinen Verpackungsfreien Einkauf",
         "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
+        "columns_desktop": 4,
         "color_scheme": "background-1",
+        "show_view_all": false,
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "image_banner",
+    "7d871986-74fe-4c43-a63c-d8e0930461e8",
+    "2c37973b-7bfb-4f9c-9087-96c7e923bced",
     "rich_text",
+    "34534337-9554-426e-a512-af864c0661d5",
     "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "17a537bf-b558-46fd-b961-df406101b53c",
+    "45513cc0-65a7-42cc-92c2-ab9e9b4c3d90",
+    "96f55da3-d44b-410c-b40c-eae69e814da4",
+    "3d18d0c6-8ab1-49ef-858d-f70e7071e7aa",
+    "a1a28344-444a-4790-8583-0a6afdc9ad5f",
+    "1283ac75-0d88-4b44-9400-3fe8c6829e5f"
   ]
 }
