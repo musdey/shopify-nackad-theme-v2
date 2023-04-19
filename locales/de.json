@@ -394,7 +394,7 @@
       "none": "Du hast noch keine Bestellungen aufgegeben."
     },
     "recover_password": {
-      "title": "Setze dein Passwort zurück",
+      "title": "Passwort zurücksetzen",
       "subtext": "Wir werden dir eine E-Mail zum Zurücksetzen deines Passworts schicken",
       "success": "Wir haben dir eine E-Mail mit einem Link zum Aktualisieren deines Passworts geschickt."
     },

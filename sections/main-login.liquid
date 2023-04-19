@@ -4,8 +4,23 @@
 /* mobile devices */
 @media screen and (max-width: 749px) {
 
+  .paddingRegister {
+    display: block; 
+    height: 150px;
+  }
+
+  div#rc_login {
+    position: absolute !important;
+    left: 0 !important;
+    bottom: -100px !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+  }
+
   .createAccount {
-    margin-top: 85px;
+    margin-top: 50px;
   }
 
   .mobile {
@@ -18,7 +33,7 @@
   
   .desktop-background {
     position: absolute;
-    top: 500px;
+    top: 600px;
     z-index: -1;
     width: 100%;
   }
@@ -31,8 +46,24 @@
 
   @media screen and (min-width: 750px) {
 
-    .createAccount {
-    margin-top: 150px;
+    .paddingRegister {
+    display: block; 
+    height: 100px;
+  }
+
+
+    div#rc_login {
+    position: absolute !important;
+    left: 0 !important;
+    bottom: -100px !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .createAccount {
+    margin-top: 85px;
   }
 
     .mobile {
@@ -50,7 +81,7 @@
 
     .desktop-background {
     position: absolute;
-    top: 200px;
+    top: 250px;
     z-index: -1;
     width: 100%;
   }
@@ -69,8 +100,10 @@
 
     {%- form 'recover_customer_password' -%}
       {% assign recover_success = form.posted_successfully? %}
+      <h3 class="inputLabel">{{'customer.login_page.email' | t}}</h3>
       <div class="field">
         <input 
+          class="searchBar"
           type="email"
           value=""
           name="email"
@@ -100,22 +133,23 @@
           {{ form.errors.messages.form }}
         </small>
       {%- endif -%}
-
+      <a href="#login" style="margin: unset !important; display: unset !important; padding: 10px; ">
+        {{ 'customer.login_page.cancel' | t }}
+      </a>
       <button>
         {{ 'customer.login_page.submit' | t }}
       </button>
+      <div class="paddingRegister"></div>
 
-      <a href="#login">
-        {{ 'customer.login_page.cancel' | t }}
-      </a>
     {%- endform -%}
   </div>
 
   <h1 id="login" tabindex="-1">
     {{ 'customer.login_page.title' | t }}
   </h1>
+
   <div>
-    {%- if recover_success == true -%}
+    {%- if recover_success == true -%}  
       <h3 class="form__message" tabindex="-1" autofocus>
         <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
           <path d="M6.5 12.35C9.73087 12.35 12.35 9.73086 12.35 6.5C12.35 3.26913 9.73087 0.65 6.5 0.65C3.26913 0.65 0.65 3.26913 0.65 6.5C0.65 9.73086 3.26913 12.35 6.5 12.35Z" fill="#428445" stroke="white" stroke-width="0.7"/>
@@ -139,6 +173,7 @@
         </h2>
         {{ form.errors | default_errors }}
       {%- endif -%}
+        Willkommen zurück! Logge dich hier ein und Bestelle neue Leckerbissen, oder organisiere deine Accountdaten. 
       <h3 class="inputLabel">{{'customer.login_page.email' | t}}</h3>
       <div class="field">
         <input class="searchBar"

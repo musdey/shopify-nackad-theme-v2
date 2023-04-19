@@ -10,6 +10,30 @@
 
 {%- style -%}
 
+@media screen and (max-width: 749px) {
+
+  .footer .grid {
+    display: flex !important;
+  }
+  
+  .footer-block.grid__item{
+    width: 50% !important;
+    margin: unset !important;
+  }
+  .footer__content-top {
+    padding-bottom: 3rem;
+    padding-left: calc(4rem / var(--font-body-scale));
+    padding-right: unset !important;
+}
+}
+
+@media screen and (min-width: 750px) {
+  .footer-custom {
+    padding: 100px;
+
+  }
+}
+
   .footer-width {
     max-width: 1000px;
   }
@@ -59,7 +83,7 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-top footer-width" style=" margin: 0 auto; padding: 100px;">
+      <div class="footer__content-top footer-width footer-custom" style=" margin: 0 auto;">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -243,7 +267,7 @@
     {%- endunless -%}
   {%- endif -%}
 
-  <div class="footer__content-bottom" style="margin: 0 auto;">
+  <div class="footer__content-bottom" style="margin: 0 auto;text-align: -webkit-center">
     <div class="footer__content-bottom-wrapper footer-width">
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
