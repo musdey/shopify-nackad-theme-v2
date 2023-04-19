@@ -2,12 +2,10 @@
   "sections": {
     "main": {
       "type": "main-login",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "padding_top": 100,
-        "padding_bottom": 100
+        "padding_bottom": 0
       }
     }
   },

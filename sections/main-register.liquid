@@ -1,6 +1,11 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+
+  .inputLabel {
+    text-align: left;
+  }
+
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -26,6 +31,10 @@
   <h1>
     {{ 'customer.register.title' | t }}
   </h1>
+  <p style="font-size: 14px;">
+    Willkommen Bei Nackad! Erstelle Deinen Account und lege los mit dem Bestellen!
+    Wenn du bereits einen Account hast, klicke <b><a style="color: var(--gradient-base-accent-1);" href="/account/login">hier!</a></b> 
+  </p>
   {%- form 'create_customer', novalidate: 'novalidate' -%}
     {%- if form.errors -%}
       <h2 class="form__message" tabindex="-1" autofocus>
@@ -49,9 +58,11 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
+    <h3 class="inputLabel">{{'customer.register.first_name' | t}}</h3>
     <div class="field">
       <input
         type="text"
+        class="searchBar"
         name="customer[first_name]"
         id="RegisterForm-FirstName"
         {% if form.first_name %}
@@ -64,8 +75,10 @@
         {{ 'customer.register.first_name' | t }}
       </label>
     </div>
+    <h3 class="inputLabel">{{'customer.register.last_name' | t}}</h3>
     <div class="field">
       <input
+        class="searchBar"
         type="text"
         name="customer[last_name]"
         id="RegisterForm-LastName"
@@ -79,8 +92,10 @@
         {{ 'customer.register.last_name' | t }}
       </label>
     </div>
+    <h3 class="inputLabel">{{'customer.register.email' | t}}</h3>
     <div class="field">
       <input
+        class="searchBar"
         type="email"
         name="customer[email]"
         id="RegisterForm-email"
@@ -110,8 +125,10 @@
         {{ form.errors.messages.email }}.
       </span>
     {%- endif -%}
+    <h3 class="inputLabel">{{'customer.register.password' | t}}</h3>
     <div class="field">
       <input
+        class="searchBar"
         type="password"
         name="customer[password]"
         id="RegisterForm-password"
@@ -135,9 +152,13 @@
         {{ form.errors.messages.password }}.
       </span>
     {%- endif -%}
+    <div>
+      <button class="button button--primary" style="color: white; background-color: var(--gradient-base-accent-2)" type="cancel" onclick="window.location='/';return false;">Abbrechen</button>
     <button>
       {{ 'customer.register.submit' | t }}
     </button>
+
+    </div>
   {%- endform -%}
 </div>
 
