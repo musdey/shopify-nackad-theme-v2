@@ -356,7 +356,7 @@
               </svg>
             </span>
           </summary>
-          <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+          <div class="search-modal modal__content gradient" style="--inputs-border-width: 0px !important;" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
             <div class="modal-overlay"></div>
             <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
               {%- if settings.predictive_search_enabled -%}
@@ -365,8 +365,8 @@
                 <search-form class="search-modal__form">
               {%- endif -%}
                   <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-                    <div class="field" style="--input-border-width: 0px !important;">
-                      <input class="search__input field__input"
+                    <div class="field">
+                      <input class="search__input field__input searchBar"
                         id="Search-In-Modal-1"
                         type="search"
                         name="q"
@@ -385,7 +385,7 @@
                           spellcheck="false"
                         {%- endif -%}
                       >
-                      <label class="field__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
+                      <label style="color: var(--swiper-theme-color);"  class="field__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
                       <input type="hidden" name="options[prefix]" value="last">
                       <button type="reset" class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}" aria-label="{{ 'general.search.reset' | t }}">
                         <svg class="icon icon-close" aria-hidden="true" focusable="false">
@@ -398,7 +398,7 @@
                         </svg>
                       </button>
                     </div>
-
+        
                     {%- if settings.predictive_search_enabled -%}
                       <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
                         <div class="predictive-search__loading-state">
@@ -407,7 +407,7 @@
                           </svg>
                         </div>
                       </div>
-
+        
                       <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
                     {%- endif -%}
                   </form>
@@ -416,6 +416,8 @@
               {%- else -%}
                 </search-form>
               {%- endif -%}
+            </div>
+        
               <button type="button" class="modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
                 <svg class="icon icon-close" aria-hidden="true" focusable="false">
                   <use href="#icon-close">
@@ -666,7 +668,7 @@
               </svg>
             </span>
           </summary>
-          <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+          <div class="search-modal modal__content gradient" style="--inputs-border-width: 0px !important;" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
             <div class="modal-overlay"></div>
             <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
               {%- if settings.predictive_search_enabled -%}
@@ -676,8 +678,8 @@
               {%- endif -%}
                   <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
                     <div class="field">
-                      <input class="search__input field__input"
-                        id="Search-In-Modal"
+                      <input class="search__input field__input searchBar"
+                        id="Search-In-Modal-1"
                         type="search"
                         name="q"
                         value="{{ search.terms | escape }}"
@@ -695,20 +697,20 @@
                           spellcheck="false"
                         {%- endif -%}
                       >
-                      <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
+                      <label style="color: var(--swiper-theme-color);"  class="field__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
                       <input type="hidden" name="options[prefix]" value="last">
                       <button type="reset" class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}" aria-label="{{ 'general.search.reset' | t }}">
                         <svg class="icon icon-close" aria-hidden="true" focusable="false">
                           <use xlink:href="#icon-reset">
                         </svg>
                       </button>
-                      <button lass="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                      <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
                         <svg class="icon icon-search" aria-hidden="true" focusable="false">
                           <use href="#icon-search">
                         </svg>
                       </button>
                     </div>
-
+        
                     {%- if settings.predictive_search_enabled -%}
                       <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
                         <div class="predictive-search__loading-state">
@@ -717,15 +719,16 @@
                           </svg>
                         </div>
                       </div>
-
+        
                       <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
                     {%- endif -%}
                   </form>
-                {%- if settings.predictive_search_enabled -%}
-                  </predictive-search>
-                {%- else -%}
-                  </search-form>
-                {%- endif -%}
+              {%- if settings.predictive_search_enabled -%}
+                </predictive-search>
+              {%- else -%}
+                </search-form>
+              {%- endif -%}
+        
               <button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
                 <svg class="icon icon-close" aria-hidden="true" focusable="false">
                   <use href="#icon-close">

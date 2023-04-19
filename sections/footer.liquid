@@ -9,6 +9,14 @@
 {%- endif -%}
 
 {%- style -%}
+
+  .footer-width {
+    max-width: 1000px;
+  }
+
+  .black-text {
+    color: #313131 !important;
+  }
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
   }
@@ -51,7 +59,7 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-top page-width">
+      <div class="footer__content-top footer-width" style=" margin: 0 auto; padding: 100px;">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -69,24 +77,24 @@
                 {{ block.shopify_attributes }}
               >
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                  <h2 class="footer-block__heading inline-richtext black-text">{{- block.settings.heading -}}</h2>
                 {%- endif -%}
 
                 {%- case block.type -%}
                   {%- when '@app' -%}
                     {% render block %}
                   {%- when 'text' -%}
-                    <div class="footer-block__details-content rte">
+                    <div class="footer-block__details-content rte black-text">
                       {{ block.settings.subtext }}
                     </div>
                   {%- when 'link_list' -%}
                     {%- if block.settings.menu != blank -%}
-                      <ul class="footer-block__details-content list-unstyled">
+                      <ul class="footer-block__details-content list-unstyled black-text">
                         {%- for link in block.settings.menu.links -%}
                           <li>
                             <a
                               href="{{ link.url }}"
-                              class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                              class=" black-text link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
                             >
                               {{ link.title }}
                             </a>
@@ -235,8 +243,8 @@
     {%- endunless -%}
   {%- endif -%}
 
-  <div class="footer__content-bottom">
-    <div class="footer__content-bottom-wrapper page-width">
+  <div class="footer__content-bottom" style="margin: 0 auto;">
+    <div class="footer__content-bottom-wrapper footer-width">
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript>
@@ -332,7 +340,26 @@
         {%- endif -%}
       </div>
     </div>
-    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
+
+
+    {% comment %} // Logo in footer
+    <div class="header__heading-logo-wrapper">
+      {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+      {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+      {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
+      {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+      {{ settings.logo | image_url: width: 600 | image_tag:
+        class: 'header__heading-logo',
+        widths: widths,
+        height: logo_height,
+        width: settings.logo_width,
+        alt: logo_alt,
+        sizes: sizes,
+        preload: true
+      }}
+    </div> {% endcomment %}
+
+    <div class="footer__content-bottom-wrapper footer-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
