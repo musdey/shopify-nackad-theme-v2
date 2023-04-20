@@ -143,9 +143,10 @@
 
       {{ customer.default_address | format_address }}
 
-      <a href="{{ routes.account_addresses_url }}">
-        {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
-      </a>
+      <form action="{{ routes.account_addresses_url }}" style="margin-top: 0px !important;">
+        <button class="button button--primary" style="color: white; margin: unset !important;">
+          {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+        </button>
     </div>
   </div>
 </div>

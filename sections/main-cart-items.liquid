@@ -6,6 +6,34 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+
+  .cartAmount {
+    background: var(--gradient-base-accent-1);
+    color : white;
+    opacity: 1;
+    border-radius: 25px;
+  }
+
+  .addButton {
+    border-radius: 25px;
+    color: white;
+  }
+
+  .cart-items th {
+    padding: 5px;
+  }
+
+  .cart-items td {
+    padding: 5px !important;
+    vertical-align: middle;
+  }
+
+  .customCart {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -43,7 +71,7 @@
     {%- endif -%}
   </div>
 
-  <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
+  <form action="{{ routes.cart_url }}" class="customCart cart__contents critical-hidden" method="post" id="cart">
     <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
       <div class="js-contents">
         {%- if cart != empty -%}
@@ -109,13 +137,24 @@
                         <strong class="cart-item__final-price product-option">
                           {{ item.final_price | money }}
                         </strong>
-                      </div>
+                      
                     {%- else -%}
                       <div class="product-option">
                         {{ item.original_price | money }}
-                      </div>
+                      
                     {%- endif -%}
 
+                    (
+                      {% if item.unit_price_measurement %}
+                        {{ item.unit_price | money }} /
+                        {% if item.unit_price_measurement.reference_value != 1 %}
+                          {{ item.unit_price_measurement.reference_value }}
+                        {% endif %}
+                        {{ item.unit_price_measurement.reference_unit }}
+                      {% else %}
+                      pro Stk.          
+                      {% endif %})
+                    </div>
                     {%- if item.product.has_only_default_variant == false
                       or item.properties.size != 0
                       or item.selling_plan_allocation != null
@@ -222,8 +261,8 @@
                       <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
                         {{ 'products.product.quantity.label' | t }}
                       </label>
-                      <quantity-input class="quantity cart-quantity">
-                        <button class="quantity__button no-js-hidden" name="minus" type="button">
+                      <quantity-input class="cartAmount quantity cart-quantity" >
+                        <button class="addButton quantity__button no-js-hidden" name="minus" type="button">
                           <span class="visually-hidden">
                             {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
                           </span>
@@ -247,7 +286,7 @@
                           id="Quantity-{{ item.index | plus: 1 }}"
                           data-index="{{ item.index | plus: 1 }}"
                         >
-                        <button class="quantity__button no-js-hidden" name="plus" type="button">
+                        <button class="addButton quantity__button no-js-hidden" name="plus" type="button">
                           <span class="visually-hidden">
                             {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
                           </span>
@@ -256,12 +295,17 @@
                       </quantity-input>
 
                       <cart-remove-button
+                        style="background: var(--gradient-base-accent-2);
+                        color: white;
+                        border-radius: 25px;
+                        margin: 0px 0px 0px 15px;"
                         id="Remove-{{ item.index | plus: 1 }}"
                         data-index="{{ item.index | plus: 1 }}"
                       >
                         <a
                           href="{{ item.url_to_remove }}"
                           class="button button--tertiary"
+                          style="color: white;"
                           aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                         >
                           {% render 'icon-remove' %}

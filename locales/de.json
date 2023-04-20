@@ -41,8 +41,8 @@
     },
     "cart": {
       "view": "Warenkorb ansehen ({{ count }})",
-      "item_added": "Artikel wurde in den Warenkorb gelegt",
-      "view_empty_cart": "Warenkorb ansehen"
+      "item_added": "Artikel wurde ins Einkaufswagerl gelegt",
+      "view_empty_cart": "Einkaufswagerl ansehen"
     },
     "share": {
       "copy_to_clipboard": "Link kopieren",
@@ -106,7 +106,7 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "In den Warenkorb legen",
+      "add_to_cart": "Ins Einkaufswagerl legen",
       "description": "Beschreibung",
       "on_sale": "Sale",
       "product_variants": "Produktvarianten",
@@ -261,16 +261,16 @@
       }
     },
     "cart": {
-      "title": "Dein Warenkorb",
-      "caption": "Artikel im Warenkorb",
+      "title": "Einkaufswagerl",
+      "caption": "Artikel im Einkaufswagerl",
       "remove_title": "{{ title }} entfernen",
       "subtotal": "Zwischensumme",
       "new_subtotal": "Neue Zwischensumme",
       "note": "Spezielle Bestellanweisungen",
-      "checkout": "Auschecken",
-      "empty": "Dein Warenkorb ist leer",
-      "cart_error": "Beim Aktualisieren deines Warenkorbs ist ein Fehler aufgetreten. Bitte versuche es erneut.",
-      "cart_quantity_error_html": "Du kannst deinem Warenkorb nur {{ quantity }} Stück dieses Artikels hinzufügen.",
+      "checkout": "Zur Kassa",
+      "empty": "Dein Einkaufswagerl ist leer",
+      "cart_error": "Beim Aktualisieren deines Einkaufswagerls ist ein Fehler aufgetreten. Bitte versuche es erneut.",
+      "cart_quantity_error_html": "Du kannst deinem Einkaufswagerl nur {{ quantity }} Stück dieses Artikels hinzufügen.",
       "taxes_and_shipping_policy_at_checkout_html": "Steuern und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet",
       "taxes_included_but_shipping_at_checkout": "Inklusive Steuern, Versand wird beim Checkout berechnet",
       "taxes_included_and_shipping_policy_html": "Inklusive Steuern. <a href=\"{{ link }}\">Versand </a> wird beim Checkout berechnet",
@@ -278,7 +278,7 @@
       "headings": {
         "product": "Produkt",
         "price": "Preis",
-        "total": "Gesamtsumme",
+        "total": "Summe",
         "quantity": "Anzahl",
         "image": "Produktbild"
       },
@@ -429,7 +429,7 @@
       "sku": "SKU",
       "price": "Preis",
       "quantity": "Menge",
-      "total": "Gesamtsumme",
+      "total": "Summe",
       "fulfilled_at_html": "Ausgeführt am {{ date }}",
       "track_shipment": "Sendung nachverfolgen",
       "tracking_url": "Tracking-Link",
