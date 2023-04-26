@@ -66,6 +66,13 @@
             "text_style": "body"
           }
         },
+        "a0545738-000f-4e51-908d-e898f4480219": {
+          "type": "text",
+          "settings": {
+            "text": "Pfand {{ product.metafields.my_fields.pfand.value }}",
+            "text_style": "body"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -139,6 +146,7 @@
         "caption",
         "price",
         "47cdfa41-a3c2-4914-b05c-e87aafe8f3df",
+        "a0545738-000f-4e51-908d-e898f4480219",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
