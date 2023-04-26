@@ -52,6 +52,21 @@
   aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
+  <div style="position: absolute; z-index: 1; max-width: 40px; margin: 10px;">
+    <div style="width: 40px; height:40px; text-align: -webkit-center; " >
+    <a style="cursor: default; vertical-align: -webkit-baseline-middle;" title="{{product.metafields.my_fields.herkunft}}">{{ product.metafields.my_fields.flagge}}</a>
+    </div>
+    {%if product.metafields.custom.vegan %}
+    <div style="width: 40px; height:40px; title="Vegan 🌱">
+      {% render 'icon-vegan'%}
+    </div>
+    {% endif %}
+    <div  style="width: 40px; height:40px; title="Biologisch 🍃">
+    {%if product.metafields.custom.bio %}
+      {% render 'icon-bio'%}
+    {% endif %}
+  </div>
+</div>
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
   <slider-component id="GalleryViewer-{{ section.id }}{{ id_append }}" class="slider-mobile-gutter">
     {%- unless is_duplicate -%}
