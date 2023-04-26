@@ -138,19 +138,6 @@
           "settings": {
             "share_label": "Teilen"
           }
-        },
-        "cb76b22d-5c57-41b5-894d-34c5c76b4d33": {
-          "type": "complementary",
-          "settings": {
-            "block_heading": "Pairs well with",
-            "make_collapsible_row": false,
-            "icon": "price_tag",
-            "product_list_limit": 10,
-            "products_per_page": 3,
-            "pagination_style": "counter",
-            "image_ratio": "square",
-            "enable_quick_add": false
-          }
         }
       },
       "block_order": [
@@ -169,8 +156,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share",
-        "cb76b22d-5c57-41b5-894d-34c5c76b4d33"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
