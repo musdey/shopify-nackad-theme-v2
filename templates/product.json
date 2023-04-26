@@ -69,8 +69,8 @@
         "a0545738-000f-4e51-908d-e898f4480219": {
           "type": "text",
           "settings": {
-            "text": "Pfand {{ product.metafields.my_fields.pfand.value }}",
-            "text_style": "body"
+            "text": "<strong>Pfand:<\/strong> {{ product.metafields.my_fields.pfand.value }}",
+            "text_style": "subtitle"
           }
         },
         "variant_picker": {
