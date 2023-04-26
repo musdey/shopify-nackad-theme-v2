@@ -6,9 +6,9 @@
         "template--16720618750183__8cb02d00-b4a9-4f36-ae18-a0085da93c98-167836866817fbb33f-2": {
           "type": "button",
           "settings": {
-            "button_label": "Zurück zum Shop",
+            "button_label": "< Zurück zum Shop",
             "button_link": "shopify:\/\/collections\/all",
-            "button_style_secondary": false,
+            "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
