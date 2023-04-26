@@ -59,10 +59,23 @@
           "settings": {
           }
         },
+        "47cdfa41-a3c2-4914-b05c-e87aafe8f3df": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button"
+          }
+        },
+        "14521a03-e291-4a33-bba1-849f03562a9f": {
+          "type": "sku",
+          "settings": {
+            "text_style": "body"
           }
         },
         "quantity_selector": {
@@ -117,6 +130,12 @@
           "settings": {
             "share_label": "Teilen"
           }
+        },
+        "011943f8-1e7b-4c3c-8581-911c89f9b16d": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
         }
       },
       "block_order": [
@@ -125,14 +144,17 @@
         "description",
         "caption",
         "price",
+        "47cdfa41-a3c2-4914-b05c-e87aafe8f3df",
         "variant_picker",
+        "14521a03-e291-4a33-bba1-849f03562a9f",
         "quantity_selector",
         "buy_buttons",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "011943f8-1e7b-4c3c-8581-911c89f9b16d"
       ],
       "settings": {
         "enable_sticky_info": true,
