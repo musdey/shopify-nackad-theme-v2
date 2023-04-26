@@ -62,8 +62,8 @@
         "47cdfa41-a3c2-4914-b05c-e87aafe8f3df": {
           "type": "text",
           "settings": {
-            "text": "<strong>Verpackung    <\/strong>{{ product.metafields.my_fields.verpackung.value }}",
-            "text_style": "body"
+            "text": "<strong>Verpackung: <\/strong>{{ product.metafields.my_fields.verpackung.value }}",
+            "text_style": "subtitle"
           }
         },
         "a0545738-000f-4e51-908d-e898f4480219": {
