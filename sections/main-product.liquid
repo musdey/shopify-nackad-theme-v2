@@ -12,6 +12,14 @@
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
   {%- style -%}
+
+    .customProductImage {
+      background: linear-gradient(to bottom, rgb(255 255 255), rgb(255, 227, 227));
+    border-radius: 20px;
+    border-style: ridge;
+    border-width: 0.5px;
+    }
+
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -56,7 +64,22 @@
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-    <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
+    <div style="position: absolute; z-index: 5; max-width: 40px; margin: 10px;">
+      <div style="width: 40px; height:40px; text-align: -webkit-center; " >
+      <a style="cursor: default; vertical-align: -webkit-baseline-middle;" title="{{product.metafields.my_fields.herkunft}}">{{ product.metafields.my_fields.flagge}}</a>
+      </div>
+      {%if product.metafields.custom.vegan %}
+      <div style="width: 40px; height:40px; title="Vegan 🌱">
+        {% render 'icon-vegan'%}
+      </div>
+      {% endif %}
+      <div  style="width: 40px; height:40px; title="Biologisch 🍃">
+      {%if product.metafields.custom.bio %}
+        {% render 'icon-bio'%}
+      {% endif %}
+    </div>
+  </div>
+  <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% render 'product-media-gallery', variant_images: variant_images %}
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
@@ -180,8 +203,8 @@
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
               <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                <details id="Details-{{ block.id }}-{{ section.id }}">
-                  <summary>
+                <details id="Details-{{ block.id }}-{{ section.id }}" style="background: white; border-radius: 20px; padding: 5px; margin: 10px;">
+                  <summary style="padding-left: 10px;" >
                     <div class="summary__title">
                       {% render 'icon-accordion', icon: block.settings.icon %}
                       <h2 class="h4 accordion__title inline-richtext">
@@ -192,7 +215,7 @@
                   </summary>
                   <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                     {{ block.settings.content }}
-                    {{ block.settings.page.content }}
+                    {{ block.settings.page.content }} 
                   </div>
                 </details>
               </div>
@@ -207,7 +230,7 @@
                 {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
                 {% # theme-check-enable %}
                 <label class="quantity__label form__label" for="Quantity-{{ section.id }}">
-                  {{ 'products.product.quantity.label' | t }}
+                  {% comment %} {{ 'products.product.quantity.label' | t }} {% endcomment %}
                   <span class="quantity__rules-cart no-js-hidden{% if cart_qty == 0 %} hidden{% endif %}">
                     <span class="loading-overlay hidden">
                       <span class="loading-overlay__spinner">
@@ -726,7 +749,7 @@
         {
           "type": "checkbox",
           "id": "show_dynamic_checkout",
-          "default": true,
+          "default": false,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
         }
