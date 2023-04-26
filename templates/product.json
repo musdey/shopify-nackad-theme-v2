@@ -72,12 +72,6 @@
             "picker_type": "button"
           }
         },
-        "14521a03-e291-4a33-bba1-849f03562a9f": {
-          "type": "sku",
-          "settings": {
-            "text_style": "body"
-          }
-        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -146,7 +140,6 @@
         "price",
         "47cdfa41-a3c2-4914-b05c-e87aafe8f3df",
         "variant_picker",
-        "14521a03-e291-4a33-bba1-849f03562a9f",
         "quantity_selector",
         "buy_buttons",
         "collapsible-row-0",
