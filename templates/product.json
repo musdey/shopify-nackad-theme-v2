@@ -59,6 +59,13 @@
           "settings": {
           }
         },
+        "322bfaf9-d0ad-441c-875e-590125f3667d": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Menge:<\/strong>",
+            "text_style": "subtitle"
+          }
+        },
         "47cdfa41-a3c2-4914-b05c-e87aafe8f3df": {
           "type": "text",
           "settings": {
@@ -145,6 +152,7 @@
         "description",
         "caption",
         "price",
+        "322bfaf9-d0ad-441c-875e-590125f3667d",
         "47cdfa41-a3c2-4914-b05c-e87aafe8f3df",
         "a0545738-000f-4e51-908d-e898f4480219",
         "variant_picker",
