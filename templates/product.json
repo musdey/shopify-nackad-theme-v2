@@ -139,10 +139,17 @@
             "share_label": "Teilen"
           }
         },
-        "011943f8-1e7b-4c3c-8581-911c89f9b16d": {
-          "type": "custom_liquid",
+        "cb76b22d-5c57-41b5-894d-34c5c76b4d33": {
+          "type": "complementary",
           "settings": {
-            "custom_liquid": ""
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
           }
         }
       },
@@ -163,7 +170,7 @@
         "collapsible-row-2",
         "collapsible-row-3",
         "share",
-        "011943f8-1e7b-4c3c-8581-911c89f9b16d"
+        "cb76b22d-5c57-41b5-894d-34c5c76b4d33"
       ],
       "settings": {
         "enable_sticky_info": true,
