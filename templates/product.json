@@ -39,7 +39,8 @@
         },
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+          }
         },
         "caption": {
           "type": "text",
@@ -50,7 +51,8 @@
         },
         "price": {
           "type": "price",
-          "settings": {}
+          "settings": {
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -60,7 +62,8 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {}
+          "settings": {
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -70,14 +73,15 @@
         },
         "description": {
           "type": "description",
-          "settings": {}
+          "settings": {
+          }
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Zubereitung & Lagerung",
             "icon": "clipboard",
-            "content": "",
+            "content": "<p>{{ product.metafields.custom.lagerungshinweise | metafield_tag }}<\/p>",
             "page": ""
           }
         },
@@ -86,7 +90,7 @@
           "settings": {
             "heading": "Partner & Lieferanten",
             "icon": "truck",
-            "content": "",
+            "content": "<p>{{ product.metafields.my_fields.verantwortliches_unternehmen | metafield_tag }}<\/p>",
             "page": ""
           }
         },
@@ -95,7 +99,7 @@
           "settings": {
             "heading": "Zutaten & Nährwerte",
             "icon": "leaf",
-            "content": "",
+            "content": "<p>{{ product.metafields.my_fields.zutaten_und_n_hrwerte | metafield_tag }}<\/p>",
             "page": ""
           }
         },
@@ -104,7 +108,7 @@
           "settings": {
             "heading": "Allergene & Zusatzstoffe",
             "icon": "gluten_free",
-            "content": "",
+            "content": "<p>{{ product.metafields.my_fields.allergene_und_zusatzstoffe | metafield_tag }}<\/p>",
             "page": ""
           }
         },
