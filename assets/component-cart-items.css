@@ -24,6 +24,10 @@
 }
 
 .cart-item__image-container {
+  border: unset;
+  background: unset;
+  background-attachment: unset;
+  background-color: unset;
   display: inline-flex;
   align-items: flex-start;
 }
@@ -217,14 +221,17 @@ cart-remove-button .icon-remove {
     display: flex;
     justify-content: space-between;
     border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   .cart-item {
     display: grid;
     grid-template: repeat(2, auto) / repeat(4, 1fr);
     /* gap: 1.5rem; */
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
   }
 
   .cart-item:last-child {

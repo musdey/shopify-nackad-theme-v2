@@ -264,7 +264,7 @@
       "title": "Einkaufswagerl",
       "caption": "Artikel im Einkaufswagerl",
       "remove_title": "{{ title }} entfernen",
-      "subtotal": "Zwischensumme",
+      "subtotal": "Summe",
       "new_subtotal": "Neue Zwischensumme",
       "note": "Spezielle Bestellanweisungen",
       "checkout": "Zur Kassa",

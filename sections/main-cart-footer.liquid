@@ -27,8 +27,8 @@
             {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div class="totals">
-                  <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-                  <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+                  <h1 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h1>
+                  <h1 class="totals__subtotal-value" style="font-size:30px; color: var(--gradient-base-accent-1);">{{ cart.total_price | money_with_currency }}</h1>
                 </div>
 
                 <div>
@@ -79,11 +79,11 @@
                 </button>
               </div>
 
-              {%- if additional_checkout_buttons -%}
+              {% comment %} {%- if additional_checkout_buttons -%}
                 <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
                   {{ content_for_additional_checkout_buttons }}
                 </div>
-              {%- endif -%}
+              {%- endif -%} {% endcomment %}
           {%- endcase -%}
         {% endfor %}
 

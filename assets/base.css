@@ -2036,7 +2036,6 @@ input[type='checkbox'] {
   color: currentColor;
   font-size: 2rem;
   font-weight: 500;
-  opacity: 0.85;
   text-align: center;
   background-color: transparent;
   border: 0;
@@ -2179,8 +2178,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .modal__close-button .icon {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .modal__content {
@@ -2211,7 +2210,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-button));
+  background-color: var(--gradient-base-accent-2);
   color: rgb(var(--color-button-text));
   height: 1.7rem;
   width: 1.7rem;
@@ -2220,8 +2219,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
-  bottom: 0.8rem;
-  left: 2.2rem;
+  top: 0;
+  right: 0;
   line-height: calc(1 + 0.1 / var(--font-body-scale));
 }
 
@@ -2469,6 +2468,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header__icon span {
+  color: white;
   height: 100%;
 }
 
@@ -2482,8 +2482,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 3rem;
+  width: 3rem;
   fill: none;
   vertical-align: middle;
 }
