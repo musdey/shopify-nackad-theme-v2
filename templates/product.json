@@ -62,7 +62,7 @@
         "47cdfa41-a3c2-4914-b05c-e87aafe8f3df": {
           "type": "text",
           "settings": {
-            "text": "Verpackung: {{ product.metafields.my_fields.verpackung.value }}",
+            "text": "<strong>Verpackung    <\/strong>{{ product.metafields.my_fields.verpackung.value }}",
             "text_style": "body"
           }
         },
