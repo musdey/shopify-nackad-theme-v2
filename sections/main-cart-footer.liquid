@@ -66,14 +66,16 @@
                 </noscript>
 
                 <button
-                  type="submit"
-                  id="checkout"
+                  id="delivery-slot-button"
+                  onclick="openPopup()"
                   class="cart__checkout-button button"
-                  name="checkout"
+                  name="delivery-slot"
+                  {%comment%}
+                  Check if cart is below order value
+                  {%endcomment%}
                   {% if cart == empty %}
                     disabled
                   {% endif %}
-                  form="cart"
                 >
                   {{ 'sections.cart.checkout' | t }}
                 </button>
@@ -86,7 +88,7 @@
               {%- endif -%} {% endcomment %}
           {%- endcase -%}
         {% endfor %}
-
+        {% render 'deliverySlotPopup' %}
         <div id="cart-errors"></div>
       </div>
     </div>
