@@ -1,5 +1,101 @@
 {%- style -%}
 
+@media screen and (max-width: 750px) {
+
+    .button-container {
+      margin-top: 20px;
+      display: flex;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .cart-note {
+      width: 90%;
+      height: 50px;
+    }
+
+    .popup-close {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+    .popup-header {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+   .popup-container {
+    opacity: 0;
+    transition: opacity 1s linear;
+    visibility: hidden;
+    position: absolute;
+    z-index: 3;
+    position: fixed;
+    inset: 0;
+    margin: unset;
+    text-align: -webkit-center;
+    background: #FFE3E3;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 750px;
+    min-width: 250px;
+    margin: auto;
+    height: fit-content;
+  }
+
+  .nack-container {
+    display: flex;
+  }
+
+  .nack-subcontainer {
+    border-radius: 20px;
+    padding: 10px;
+    background: white;
+    text-align: center;
+    width:80%;
+    margin:10%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nack-prev,
+  .nack-next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+
+  .nack-prev {
+    left: 0.5rem;
+  }
+
+  .nack-next {
+    right: 0.5rem;
+  }
+
+  /* Move the carousel to the left when clicking the "Prev" button */
+  .nack-prev:focus + .nack-container .nack-subcontainer:last-child,
+  .nack-prev:active + .nack-container .nack-subcontainer:last-child,
+  .nack-prev:hover + .nack-container .nack-subcontainer:last-child {
+    transform: translateX(-100%);
+  }
+
+  /* Move the carousel to the right when clicking the "Next" button */
+  .nack-next:focus + .nack-container .nack-subcontainer:first-child,
+  .nack-next:active + .nack-container .nack-subcontainer:first-child,
+  .nack-next:hover + .nack-container .nack-subcontainer:first-child {
+    transform: translateX(-200%);
+  }
+}
+
 .background-blur{
     opacity: 0;
     transition: opacity 1s linear;
@@ -17,71 +113,91 @@
     text-align: -webkit-center;
 }
 
-.popup-container {
-    opacity: 0;
-    transition: opacity 1s linear;
-    visibility: hidden;
-    position: absolute;
-    z-index: 3;
-    position: fixed;
-    inset: 0;
-    margin: unset;
-    text-align: -webkit-center;
-    background: #FFE3E3;
+@media screen and (min-width: 750px) {
+
+    .cart-note {
+    width: 50%;
+    height: 100px;
+  }
+
+    .popup-close {
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+
+  .nack-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+    .nack-subcontainer {
     border-radius: 20px;
-    width: 75%;
-    max-width: 750px;
+    padding: 10px;
+    background: white;
+    text-align: center;
+    width: 195px;
+  }
+
+  .popup-container {
+      opacity: 0;
+      transition: opacity 1s linear;
+      visibility: hidden;
+      position: absolute;
+      z-index: 3;
+      position: fixed;
+      inset: 0;
+      margin: unset;
+      text-align: -webkit-center;
+      background: #FFE3E3;
+      border-radius: 20px;
+      width: 75%;
+      max-width: 750px;
+      min-width: 250px;
+      margin: auto;
+      height: fit-content;
+  }
+
+  .popup-header {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 60px;
+    margin: 30px;
+  }
+  .nack-deliveryslot-container {
     min-width: 250px;
-    margin: auto;
-    height: fit-content;
-}
+    margin: 0 auto;
+  }
+
+  .nack-date {
+    width: 25%;
+    height: 10px;
+    min-height: 25px;
+  }
+
+  .nack-header {
+    width: 100%;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
 
 
-.popup-header {
-  text-align: center;
-  padding-bottom: 10px;
-  font-size: 60px;
-  margin: 30px;
-}
+  .nack-input {
+    vertical-align: -webkit-baseline-middle;
+    align-self: center;
+    font-size: 20px;
+    accent-color: #3A7B77;
+  }
 
-.popup-close {
-  text-align: right;
-  padding-top: 10px;
-  padding-right: 10px;
-}
+  .nack-button:after {
+    background: red;
+  }
+} /* End desktop  */
 
-.nack-deliveryslot-container {
-  min-width: 250px;
-  margin: 0 auto;
-}
-
-.nack-date {
-  width: 25%;
-  height: 10px;
-  min-height: 25px;
-}
-
-.nack-header {
-  width: 100%;
-  border-bottom-color: black;
-  border-bottom-style: solid;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-}
-
-.nack-subcontainer {
-  border-radius: 20px;
-  padding: 10px;
-  background: white;
-  text-align: center;
-  width: 195px;
-}
-
-.nack-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
+/* start generic */
 
 .nack-button {
   margin: 5px;
@@ -95,25 +211,14 @@
   vertical-align: -webkit-baseline-middle;
   display: flex;
   justify-content: space-evenly;
-
 }
-
-.nack-input {
-  vertical-align: -webkit-baseline-middle;
-  align-self: center;
-  font-size: 20px;
-  accent-color: #3A7B77;
-}
-
-.nack-button:after {
-  background: red;
-}
-
+/* endgeneric */
 {%- endstyle -%}
+
 <div id="background-blur" class="background-blur">
 </div>
 <div id="popup-container" class="popup-container">
-    <form action="/checkout">
+    <form action="/checkout" id="checkout">
     <div class="popup-close" >
       <div onclick="closePopup()" style="width:fit-content; height: fit-content; float: right; cursor: pointer;">
         <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,32 +230,35 @@
       Liefertermin
     </h1>
     <div class="nack-deliveryslot-container">
-      <div id="nack-elements">
+      <div id="nack-elements" style="overflow:hidden;">
       </div>
+      <button type="button" class="nack-prev"><</button>
+      <button type="button" class="nack-next">></button>
     </div>
     <div name="Lieferhinweise">
       <div>
         <div>
             <h2 for="Cart-note">{{ 'sections.cart.note' | t }}</h2>
-            <cart-note style="width: 50%" class="cart__note field">
-               
+            <cart-note class="cart-note cart__note field">
                 <textarea
-                    style="background: white; border-radius: 20px;"
+                    style="background: white; border-radius: 20px; min-height: 50px; height: 50px;"
                   class="text-area field__input"
                   name="note"
-                  form="cart"
+                  form="checkout"
                   id="Cart-note"
                   placeholder="{{ 'sections.cart.note' | t }}"
                 >{{ cart.note }}</textarea>
               </cart-note>
+              <input type="submit" value="Email" class="submitButton">
         </div>
       </div>
     </div>
-    <div style="float: right; margin: 25px;">
-      <button type="button" onclick="closePopup()"class="cart__checkout-button button" style="background:#DC9393;">
+    <div class="button-container">
+      <button type="button" onclick="closePopup()"class="cart__checkout-button button" style="background:#DC9393; margin: 1px;">
         Abbrechen
       </button>
       <button
+        style="margin: 1px;"
         type="submit"
         id="checkout"
         class="cart__checkout-button button"
@@ -168,7 +276,7 @@
 </form>
 </div>
 <script>
-
+ 
     var closePopup = function() {
         document.getElementById("background-blur").style.visibility = "hidden";
         document.getElementById("popup-container").style.visibility = "hidden";
@@ -190,6 +298,12 @@
 
     var options = {
         weekday: 'short',
+        month: 'numeric',
+        day: 'numeric'
+      };
+
+      var options2 = {
+        year: 'numeric',
         month: 'numeric',
         day: 'numeric'
       };
@@ -235,9 +349,9 @@
             newInput.id = id;
             newInput.className = "nack-input";
             newInput.type = "radio";
-            newInput.name = "deliverySlot";
-            newInput.for = "deliverySlot";
-            newInput.value = obj.slotHours;
+            newInput.name = "attributes[deliverySlot]";
+            newInput.for = "attributes[deliverySlot]";
+            newInput.value = new Date(obj.deliveryDay).toLocaleDateString('de-AT', options2) + "x" + obj.slotHours;
             newInput.required = true;
             var labelText = document.createElement("div");
             labelText.innerText = obj.slotHours;
@@ -256,6 +370,49 @@
         subcontainer.appendChild(elem);
         var finalDestination = document.getElementById('nack-elements');
         finalDestination.appendChild(subcontainer);
-      })
+        var displayedSubcontainer = document.getElementsByClassName('nack-subcontainer');
+        for(item of displayedSubcontainer){
+          if(item.childNodes.length == 1){
+            item.style.display = "none";
+          }
+        }
+
+         const prevBtn = document.querySelector(".nack-prev");
+  const nextBtn = document.querySelector(".nack-next");
+  const container = document.querySelector(".nack-container");
+
+  let currentItem = 0;
+  let numItems = container.children.length;
+
+  // Move the carousel to the left
+  function movePrev() {
+    if (currentItem === 0) {
+      currentItem = numItems - 1;
+    } else {
+      currentItem--;
+    }
+    updateCarousel();
+  }
+
+  // Move the carousel to the right
+  function moveNext() {
+    if (currentItem === numItems - 1) {
+      currentItem = 0;
+    } else {
+      currentItem++;
+    }
+    updateCarousel();
+  }
+
+  // Update the carousel to show the current item
+  function updateCarousel() {
+    container.style.transform = `translateX(-${currentItem * 100}%)`;
+  }
+
+  prevBtn.addEventListener("click", movePrev);
+  nextBtn.addEventListener("click", moveNext);
+
+      });
+      
       
 </script>
