@@ -3,15 +3,28 @@
     "main": {
       "type": "main-page",
       "custom_css": [
-        "{text-align : center}"
+
       ],
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 24
+      }
+    },
+    "0abc6789-706c-4949-9c24-f7deca0cfecf": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "{margin-top: -400px; position: absolute; z-index: -1;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div>\n<svg width=\"631\" height=\"408\" viewBox=\"0 0 631 408\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M0 0C0 0 42.8585 90.8243 76.5 145.5C101.448 186.047 110.942 213.255 145.5 246C181.792 280.389 240.312 263.866 255.5 311.5C270.311 357.952 180.812 385.947 207.5 426.75C235.322 469.286 288.185 408.195 337.5 420.5C387.991 433.098 403.45 469.517 451.5 489.5C522.844 519.171 630.5 523 630.5 523H0V0Z\" fill=\"#9FD6D2\"\/>\n<ellipse cx=\"159.5\" cy=\"144.5\" rx=\"29.5\" ry=\"25.5\" fill=\"#9FD6D2\"\/>\n<\/svg>\n\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "0abc6789-706c-4949-9c24-f7deca0cfecf"
   ]
 }
