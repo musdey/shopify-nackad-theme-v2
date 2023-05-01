@@ -19,8 +19,7 @@
       "block_order": [
         "announcement-bar-0"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "header": {
       "type": "header",
@@ -44,11 +43,9 @@
     },
     "17e0c65b-8136-4a71-85c1-cdb1ea2e8b0a": {
       "type": "custom-liquid",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
-        "custom_liquid": "<div style=\"height:56px; background: white !important;\">\n<\/div>",
+        "custom_liquid": "{% render 'custom-subheader' %}",
         "color_scheme": "background-2",
         "padding_top": 0,
         "padding_bottom": 0

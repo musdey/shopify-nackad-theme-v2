@@ -1,0 +1,119 @@
+{% style%}
+    .subNavi {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 57px;
+    background: white;
+    }
+
+
+    .subNavImg {
+    height: 57px;
+    block-size: fit-content;
+    }
+
+    .subNavA {
+    text-decoration-line: none;
+    color: black;
+    height: fit-content;
+    margin: 10px;
+    font-weight: 700;
+    font-size: larger;
+    }
+
+    .subNavContainer {
+    display: flex;
+    justify-content: space-between;
+    }
+
+    @media screen and (min-width: 749px) {
+        .subNavElem {
+            display: flex;
+            align-items: center;
+            height: 57px;
+        }
+    }
+
+    @media screen and (max-width: 749px) {
+    /* Dropdown Button */
+    .dropbtn {
+        background-color: white;
+        color: black;
+        padding: 20px;
+        height: 57px;
+        font-size: x-large;
+        font-weight: 700;
+        border: none;
+        padding-right: 0px;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        border-radius: 20px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: white;}
+    }
+{% endstyle%}
+    
+<div class="subNavi">
+    <div class="subNavContainer">
+    <div class="subNavElem">
+        <img style="padding-top: 3px;" height="50px" src="https://cdn.shopify.com/s/files/1/0610/3141/6055/t/6/assets/logo.png?v=5652842147899420911640623034">
+    </div>
+    <div class="dropdown">
+        <button class="medium-hide large-up-hide dropbtn">Sortiment
+        <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.5001 11.6021L0.975098 3.07709L3.13864 0.913544L9.5001 7.30729L15.8616 0.945835L18.0251 3.10938L9.5001 11.6021Z" fill="#313131"/>
+        </svg>    
+    </button>
+        <div class="dropdown-content subNavElem">
+
+        <a class="subNavA" href="/collections/lebensmittel">Lebensmittel</a>
+        <a class="subNavA" href="/collections/vorratskammer">Vorräte</a>
+        <a class="subNavA" href="/collections/getranke">Getränke</a>
+        <a class="subNavA" href="/collections/drogerie">Drogerie</a>
+    </div>
+      </div>
+    </div>
+</div>
+
+<script>
+        console.log("ready")
+        var subnavs = document.getElementsByClassName("subNavA")
+        console.log(subnavs);
+        for(var i = 0; i < subnavs.length; i++) {
+            if (subnavs[i].href.includes(window.location.pathname)) {
+                subnavs[i].style.textDecoration = "underline";
+            }
+        }
+</script>
+    
