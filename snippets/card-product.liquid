@@ -20,6 +20,55 @@
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
+{% style %}
+
+.cartAmount {
+    background: var(--gradient-base-accent-1);
+    color : white;
+    opacity: 1;
+    border-radius: 25px;
+  }
+
+  .addButton {
+    border-radius: 25px;
+    color: white;
+  }
+
+  .cart-items th {
+    padding: 5px;
+  }
+
+  .cart-items td {
+    padding: 5px !important;
+    vertical-align: middle;
+  }
+
+  .customCart {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+.card-wrapper-custom{
+  background: linear-gradient(to bottom, rgb(255 255 255), rgb(255, 227, 227));
+    padding: 10px;
+    border-radius: 20px;
+}
+
+{% endstyle%}
+
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -32,13 +81,13 @@
       assign ratio = 1
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover">
+  <div class="card-wrapper-custom card-wrapper product-card-wrapper underline-links-hover">
     <div
       class="
         card
         card--{{ settings.card_style }}
         {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
-        {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+        {% if settings.card_style == 'card' %} {% endif %}
         {% if extend_height %} card--extend-height{% endif %}
         {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
         {% if horizontal_class %} card--horizontal{% endif %}
@@ -46,14 +95,15 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div
-        class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
+        class="card__inner {% if settings.card_style == 'standard' %}{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         {%- if card_product.featured_media -%}
-          <div class="card__media">
+          <div class="card__media" style="mix-blend-mode: darken;">
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
+                style="border-radius: 20px;"
                 srcset="
                   {%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
                   {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
@@ -200,7 +250,7 @@
           </div>
         </div>
         {%- if show_quick_add -%}
-          <div class="quick-add no-js-hidden">
+          {% comment %} <div class="quick-add no-js-hidden">
             {%- liquid
               assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
               assign qty_rules = false
@@ -311,7 +361,39 @@
                 {%- endform -%}
               </product-form>
             {%- endif -%}
-          </div>
+          </div> {% endcomment %}
+          <quantity-input class="cartAmount quantity cart-quantity" >
+            <button class="addButton quantity__button no-js-hidden" name="minus" type="button">
+              <span class="visually-hidden">
+                {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
+              </span>
+              {% render 'icon-minus' %}
+            </button>
+            <input
+              class="quantity__input"
+              data-quantity-variant-id="{{ item.variant.id }}"
+              type="number"
+              name="updates[]"
+              value="{{ item.quantity }}"
+              {% # theme-check-disable %}
+              data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
+              min="{{ item.variant.quantity_rule.min }}"
+              {% if item.variant.quantity_rule.max != null %}
+                max="{{ item.variant.quantity_rule.max }}"
+              {% endif %}
+              step="{{ item.variant.quantity_rule.increment }}"
+              {% # theme-check-enable %}
+              aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
+              id="Quantity-{{ item.index | plus: 1 }}"
+              data-index="{{ item.index | plus: 1 }}"
+            >
+            <button class="addButton quantity__button no-js-hidden" name="plus" type="button">
+              <span class="visually-hidden">
+                {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
+              </span>
+              {% render 'icon-plus' %}
+            </button>
+          </quantity-input>
         {%- endif -%}
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}

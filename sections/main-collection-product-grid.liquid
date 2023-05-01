@@ -166,12 +166,31 @@
             {%- if paginate.pages > 1 -%}
               {% render 'pagination', paginate: paginate, anchor: '' %}
             {%- endif -%}
+
+            {% if paginate.next %}
+              <a class="pagination__next" href="{{ paginate.next.url }}">
+    
+              </a>
+              <!-- status elements -->
+              <div class="scroller-status">
+                  <div class="loader-ellips">
+                    <span class="loader-ellips__dot"></span>
+                    <span class="loader-ellips__dot"></span>
+                    <span class="loader-ellips__dot"></span>
+                    <span class="loader-ellips__dot"></span>
+                  </div>
+                  <p class="infinite-scroll-last" style="text-align:center;">End of content</p>
+                  <p class="infinite-scroll-error" style="text-align:center;">No more pages to load</p>
+              </div>
+{% endif %}
           </div>
         {%- endif -%}
       {%- endpaginate -%}
     </div>
   </div>
 </div>
+
+{% include 'collection-infinite-scroll' %}
 
 {% schema %}
 {
