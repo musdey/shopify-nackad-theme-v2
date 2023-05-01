@@ -115,9 +115,14 @@
 
 @media screen and (min-width: 750px) {
 
+  .button-container {
+    float: right;
+    margin: 25px;
+  }
+
     .cart-note {
     width: 50%;
-    height: 100px;
+    height: 50px;
   }
 
     .popup-close {
@@ -232,8 +237,8 @@
     <div class="nack-deliveryslot-container">
       <div id="nack-elements" style="overflow:hidden;">
       </div>
-      <button type="button" class="nack-prev"><</button>
-      <button type="button" class="nack-next">></button>
+      <button type="button" class="nack-prev medium-hide large-up-hide"><</button>
+      <button type="button" class="nack-next medium-hide large-up-hide">></button>
     </div>
     <div name="Lieferhinweise">
       <div>
@@ -249,7 +254,6 @@
                   placeholder="{{ 'sections.cart.note' | t }}"
                 >{{ cart.note }}</textarea>
               </cart-note>
-              <input type="submit" value="Email" class="submitButton">
         </div>
       </div>
     </div>
