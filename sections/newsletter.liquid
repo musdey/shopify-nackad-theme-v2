@@ -2,33 +2,80 @@
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+
+
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  @media screen and (max-width: 750px) {
+
+    .left-wave {
+      width: 150px;
+    height: 150px;
+    margin-top: -125px;
+    position: absolute;
+    z-index: 0;
+    }
+
+    .right-wave {
+      width: 350px;
+    height: 200px;
+    text-align: -webkit-right;
+    right: 0px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -185px;
+    }
+  }
+
   @media screen and (min-width: 750px) {
+
+    .right-wave {
+      width: 480px;
+    height: 200px;
+    text-align: -webkit-right;
+    right: 0px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -253px;
+    }
+
+    .left-wave {
+      width: 375px;
+    height: 220px;
+    margin-top: -313px;
+    position: absolute;
+    z-index: 0;
+    }
+
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
 {%- endstyle -%}
-
-<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
+<div class="right-wave">
+  <svg viewBox="0 0 796 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M797 0C797 0 730.162 12.318 688.849 56.2258C658.211 88.7875 711.623 191.833 669.185 218.129C624.617 245.745 524.995 159.3 506.344 197.553C488.156 234.856 574.956 309.939 542.182 342.706C508.016 376.865 431.716 351.183 371.155 361.065C309.149 371.182 264.284 395.806 204.012 404.419C119.212 416.538 0 420 0 420H797V0Z" fill="#9FD6D2"/>
+    </svg>
+    
+</div>
+<div style="z-index: 1;" class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
   <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
-          <h2 class="inline-richtext {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+          <h2 class="inline-richtext {{ block.settings.heading_size }}" {{ block.shopify_attributes }} style="color: white; " >
             {{ block.settings.heading }}
           </h2>
         {%- when 'paragraph' -%}
-          <div class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+          <div style="color: white; " class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
         {%- when 'email_form' -%}
-          <div {{ block.shopify_attributes }}>
+          <div style="text-align: -webkit-right; z-index:2;" {{ block.shopify_attributes }}>
             {% form 'customer', class: 'newsletter-form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div class="newsletter-form__field-wrapper">
@@ -37,7 +84,7 @@
                     id="NewsletterForm--{{ section.id }}"
                     type="email"
                     name="contact[email]"
-                    class="field__input"
+                    class="field__input searchBar"
                     value="{{ form.email }}"
                     aria-required="true"
                     autocorrect="off"
@@ -59,11 +106,17 @@
                   <button
                     type="submit"
                     class="newsletter-form__button field__button"
+                    style="background: var(--gradient-base-accent-2);
+                    color: white;
+                    border-bottom-right-radius: 20px;
+                    border-top-right-radius: 20px;
+                    width: fit-content;
+                    padding: 10px;"
                     name="commit"
                     id="Subscribe"
                     aria-label="{{ 'newsletter.button_label' | t }}"
                   >
-                    {% render 'icon-arrow' %}
+                    {{ 'newsletter.button_label' | t }}
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -89,6 +142,11 @@
           </div>
       {%- endcase -%}
     {%- endfor -%}
+  </div>
+  <div class="left-wave">
+    <svg viewBox="0 0 665 555" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0C0 0 45.5286 96.3814 81.266 154.402C107.769 197.43 117.854 226.303 154.565 261.052C193.117 297.544 255.284 280.011 271.418 330.559C287.151 379.853 192.077 409.562 220.427 452.861C249.982 498 306.139 433.171 358.526 446.228C412.163 459.598 428.585 498.245 479.629 519.45C555.417 550.936 665 555 665 555H0V0Z" fill="#9FD6D2"/>
+      </svg>
   </div>
 </div>
 

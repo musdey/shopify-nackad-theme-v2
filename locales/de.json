@@ -58,9 +58,9 @@
     }
   },
   "newsletter": {
-    "label": "E-Mail",
+    "label": "E-Mail Adresse",
     "success": "Danke für deine Anmeldung",
-    "button_label": "Abonnieren"
+    "button_label": "10€ Sparen"
   },
   "accessibility": {
     "skip_to_text": "Direkt zum Inhalt",
