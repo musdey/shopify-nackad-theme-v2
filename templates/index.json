@@ -109,34 +109,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
     "96da21e5-1720-453f-81fa-f7a1a65bb234": {
       "type": "custom-liquid",
       "settings": {
@@ -152,8 +124,9 @@
         "template--16749473661159__ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7-1683060932aef1c63c-0": {
           "type": "column",
           "settings": {
-            "title": "<strong>Plastik gespart:<\/strong>",
-            "text": "<h4>231.141 Verpackungen<\/h4>",
+            "image": "shopify:\/\/shop_images\/plastik_gespart.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -161,16 +134,17 @@
         "template--16749473661159__ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7-1683060932aef1c63c-1": {
           "type": "column",
           "settings": {
-            "title": "<strong>CO2 gespart:<\/strong>",
-            "text": "<h4>13.413 kg<\/h4>",
+            "image": "shopify:\/\/shop_images\/verpackungen.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "template--16749473661159__ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7-1683060932aef1c63c-2": {
+        "3e4e5372-1329-40f2-86c4-9e6728022ac3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/glas.jpg",
+            "image": "shopify:\/\/shop_images\/glas.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -181,23 +155,23 @@
       "block_order": [
         "template--16749473661159__ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7-1683060932aef1c63c-0",
         "template--16749473661159__ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7-1683060932aef1c63c-1",
-        "template--16749473661159__ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7-1683060932aef1c63c-2"
+        "3e4e5372-1329-40f2-86c4-9e6728022ac3"
       ],
       "settings": {
         "title": "Unsere Erfolge",
         "heading_size": "h1",
         "image_width": "half",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
         "color_scheme": "background-1",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 100
       }
     },
     "96f55da3-d44b-410c-b40c-eae69e814da4": {
@@ -344,7 +318,6 @@
     "7d871986-74fe-4c43-a63c-d8e0930461e8",
     "2c37973b-7bfb-4f9c-9087-96c7e923bced",
     "b606ca18-bd79-4a80-8d1d-35a3588573a2",
-    "featured_collection",
     "96da21e5-1720-453f-81fa-f7a1a65bb234",
     "ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7",
     "96f55da3-d44b-410c-b40c-eae69e814da4",
