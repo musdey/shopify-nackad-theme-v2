@@ -55,6 +55,7 @@
     },
     "rich_text": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -76,36 +77,65 @@
         "padding_bottom": 0
       }
     },
-    "34534337-9554-426e-a512-af864c0661d5": {
-      "type": "image-with-text",
+    "b606ca18-bd79-4a80-8d1d-35a3588573a2": {
+      "type": "multicolumn",
       "blocks": {
-        "template--16720618389735__34534337-9554-426e-a512-af864c0661d5-16783678102e005d68-1": {
-          "type": "text",
+        "template--16749473661159__b606ca18-bd79-4a80-8d1d-35a3588573a2-16830582286bb77f16-0": {
+          "type": "column",
           "settings": {
-            "text": "<ol><li>Bequem und einach bestellen<\/li><li>Klimafreundlich LIefern lassen<\/li><li>Neue Bestellung annehmen und alte Behälter zurückgeben<\/li><\/ol>",
-            "text_style": "body"
+            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-03-07_at_18.03.26.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16749473661159__b606ca18-bd79-4a80-8d1d-35a3588573a2-16830582286bb77f16-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/so-funktioniert_s.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16749473661159__b606ca18-bd79-4a80-8d1d-35a3588573a2-16830582286bb77f16-2": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "template--16720618389735__34534337-9554-426e-a512-af864c0661d5-16783678102e005d68-1"
+        "template--16749473661159__b606ca18-bd79-4a80-8d1d-35a3588573a2-16830582286bb77f16-0",
+        "template--16749473661159__b606ca18-bd79-4a80-8d1d-35a3588573a2-16830582286bb77f16-1",
+        "template--16749473661159__b606ca18-bd79-4a80-8d1d-35a3588573a2-16830582286bb77f16-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-03-07_at_18.03.26.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "title": "So funktioniert's",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -326,7 +356,7 @@
     "7d871986-74fe-4c43-a63c-d8e0930461e8",
     "2c37973b-7bfb-4f9c-9087-96c7e923bced",
     "rich_text",
-    "34534337-9554-426e-a512-af864c0661d5",
+    "b606ca18-bd79-4a80-8d1d-35a3588573a2",
     "featured_collection",
     "17a537bf-b558-46fd-b961-df406101b53c",
     "45513cc0-65a7-42cc-92c2-ab9e9b4c3d90",
