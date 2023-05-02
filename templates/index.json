@@ -140,10 +140,10 @@
     "96da21e5-1720-453f-81fa-f7a1a65bb234": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"width: 80%;\n    background: white;\n    height: 3px;\n    border-radius: 5px;\n    margin: 0 auto;\" > <\/div>",
+        "custom_liquid": "<div style=\"width: 90%;\n    background: white;\n    height: 3px;\n    border-radius: 5px;\n    margin: 0 auto;\" > <\/div>",
         "color_scheme": "background-1",
-        "padding_top": 4,
-        "padding_bottom": 4
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
     "ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7": {
