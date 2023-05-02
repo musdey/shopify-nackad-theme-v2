@@ -82,6 +82,7 @@
     endif
   -%}
   <div class="card-wrapper-custom card-wrapper product-card-wrapper underline-links-hover">
+
     <div
       class="
         card
@@ -123,6 +124,7 @@
                 width="{{ card_product.featured_media.width }}"
                 height="{{ card_product.featured_media.height }}"
               >
+
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
               {%- if card_product.media[1] != null and show_secondary_image -%}
@@ -148,6 +150,21 @@
             </div>
           </div>
         {%- endif -%}
+        <div style="position: absolute; z-index: 1; max-width: 40px;">
+          <div style="width: 40px; height:40px; text-align: -webkit-center; " >
+          <a style="cursor: default; vertical-align: -webkit-baseline-middle;" title="{{card_product.metafields.my_fields.herkunft}}">{{ card_product.metafields.my_fields.flagge}}</a>
+          </div>
+          {%if card_product.metafields.custom.vegan %}
+          <div style="width: 40px; height:40px; title="Vegan 🌱">
+            {% render 'icon-vegan'%}
+          </div>
+          {% endif %}
+          <div  style="width: 40px; height:40px; title="Biologisch 🍃">
+          {%if card_product.metafields.custom.bio %}
+            {% render 'icon-bio'%}
+          {% endif %}
+        </div>
+      </div>
         <div class="card__content">
           <div class="card__information">
             <h3
