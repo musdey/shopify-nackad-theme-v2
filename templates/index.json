@@ -234,13 +234,6 @@
     "a1a28344-444a-4790-8583-0a6afdc9ad5f": {
       "type": "image-with-text",
       "blocks": {
-        "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Hast du Fragen oder Probleme? Dann kontaktiere uns einfach telefonisch oder per Mail!<\/p>",
-            "text_style": "body"
-          }
-        },
         "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-2": {
           "type": "button",
           "settings": {
@@ -250,15 +243,14 @@
         }
       },
       "block_order": [
-        "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-1",
         "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-2"
       ],
       "settings": {
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "mobile_content_alignment": "left",
@@ -272,13 +264,13 @@
         "template--16720618389735__1283ac75-0d88-4b44-9400-3fe8c6829e5f-16783692339462750b-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "frische-sortiment"
           }
         },
         "template--16720618389735__1283ac75-0d88-4b44-9400-3fe8c6829e5f-16783692339462750b-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "vorratskammer"
           }
         },
         "template--16720618389735__1283ac75-0d88-4b44-9400-3fe8c6829e5f-16783692339462750b-2": {
@@ -290,7 +282,7 @@
         "dab7e1ad-6150-4ec3-ae46-19f3b40992cf": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "drogerie"
           }
         }
       },
