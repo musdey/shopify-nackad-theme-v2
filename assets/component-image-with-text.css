@@ -139,6 +139,7 @@
 .image-with-text:not(.image-with-text--overlap) .image-with-text__media-item > *,
 .image-with-text:not(.image-with-text--overlap) .image-with-text__text-item > * {
   box-shadow: none;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 749px) {

@@ -222,8 +222,8 @@
 }
 
 .grid__item {
-    border-width: 1px;
-    border-style: groove;
+    /* border-width: 1px;
+    border-style: groove; */
     border-radius: 20px;
     background-blend-mode: darken;
     background: var(--gradient-background);
