@@ -308,6 +308,9 @@
         "template--16720618389735__1283ac75-0d88-4b44-9400-3fe8c6829e5f-16783692339462750b-2",
         "dab7e1ad-6150-4ec3-ae46-19f3b40992cf"
       ],
+      "custom_css": [
+        "h2 {margin: 0 auto;}"
+      ],
       "settings": {
         "title": "Beginne Jetzt deinen Verpackungsfreien Einkauf",
         "heading_size": "h2",
