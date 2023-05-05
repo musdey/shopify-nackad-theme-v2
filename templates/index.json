@@ -160,6 +160,9 @@
         "template--16749473661159__ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7-1683060932aef1c63c-1",
         "3e4e5372-1329-40f2-86c4-9e6728022ac3"
       ],
+      "custom_css": [
+        "h2 {margin: 0 auto;}"
+      ],
       "settings": {
         "title": "Unsere Erfolge",
         "heading_size": "h1",
@@ -171,7 +174,7 @@
         "button_label": "",
         "button_link": "",
         "color_scheme": "background-1",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 72,
         "padding_bottom": 100
