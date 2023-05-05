@@ -127,17 +127,7 @@
         "template--16749473661159__ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7-1683060932aef1c63c-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/plastik_gespart.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--16749473661159__ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7-1683060932aef1c63c-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/verpackungen.png",
+            "image": "shopify:\/\/shop_images\/unsereErfolge.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -147,7 +137,7 @@
         "3e4e5372-1329-40f2-86c4-9e6728022ac3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/glas.png",
+            "image": "shopify:\/\/shop_images\/Glas_56e59219-332f-4da2-a006-8e9454a07265.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -157,7 +147,6 @@
       },
       "block_order": [
         "template--16749473661159__ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7-1683060932aef1c63c-0",
-        "template--16749473661159__ac66df0e-3aaa-45ce-a8b3-7c951d27b6c7-1683060932aef1c63c-1",
         "3e4e5372-1329-40f2-86c4-9e6728022ac3"
       ],
       "custom_css": [
@@ -166,9 +155,9 @@
       "settings": {
         "title": "Unsere Erfolge",
         "heading_size": "h1",
-        "image_width": "half",
+        "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
