@@ -154,7 +154,8 @@
         "3e4e5372-1329-40f2-86c4-9e6728022ac3"
       ],
       "custom_css": [
-        "h2 {margin: 0 auto; margin-bottom: 25px; color: #313131;}"
+        "h2 {margin: 0 auto; margin-bottom: 25px; color: #313131;}",
+        "li {padding: 20px;}"
       ],
       "settings": {
         "title": "Unsere Erfolge",
