@@ -97,7 +97,7 @@
         "template--16749473661159__b606ca18-bd79-4a80-8d1d-35a3588573a2-16830582286bb77f16-2"
       ],
       "custom_css": [
-        "h2 {margin: 0 auto; color: #313131;}"
+        "h2 {margin: 0 auto; margin-bottom: 25px; color: #313131;}"
       ],
       "settings": {
         "title": "So funktioniert's",
