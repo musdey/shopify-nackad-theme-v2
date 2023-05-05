@@ -89,7 +89,9 @@
 <div class="subNavi">
     <div class="subNavContainer">
     <div class="subNavElem" style="align-items: center; display: flex;">
+        <a href="/">
         <img height="50px" src="https://cdn.shopify.com/s/files/1/0610/3141/6055/t/6/assets/logo.png?v=5652842147899420911640623034">
+        </a>
     </div>
     <div class="dropdown">
         <button class="medium-hide large-up-hide dropbtn">Sortiment
@@ -109,13 +111,15 @@
 </div>
 
 <script>
-        console.log("ready")
-        var subnavs = document.getElementsByClassName("subNavA")
-        console.log(subnavs);
-        for(var i = 0; i < subnavs.length; i++) {
-            if (subnavs[i].href.includes(window.location.pathname)) {
-                subnavs[i].style.textDecoration = "underline";
+        if(window.location.pathname != "/"){
+            var subnavs = document.getElementsByClassName("subNavA")
+        
+            for(var i = 0; i < subnavs.length; i++) {
+                if (subnavs[i].href.includes(window.location.pathname)) {
+                    subnavs[i].style.textDecoration = "underline";
+                }
             }
         }
+
 </script>
     

@@ -3,6 +3,10 @@
   height: 100%;
   position: relative;
   text-decoration: none;
+  border-radius: 20px;
+  background: white;
+  border-width: 1px;
+  border-style: groove;
 }
 
 .card {
