@@ -92,6 +92,9 @@
         "template--16749473661159__b606ca18-bd79-4a80-8d1d-35a3588573a2-16830582286bb77f16-1",
         "template--16749473661159__b606ca18-bd79-4a80-8d1d-35a3588573a2-16830582286bb77f16-2"
       ],
+      "custom_css": [
+        "h2 {text-align: center;}"
+      ],
       "settings": {
         "title": "So funktioniert's",
         "heading_size": "h1",
@@ -103,7 +106,7 @@
         "button_label": "",
         "button_link": "",
         "color_scheme": "background-1",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
