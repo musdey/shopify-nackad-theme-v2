@@ -224,7 +224,7 @@
         "template--16720618389735__3d18d0c6-8ab1-49ef-858d-f70e7071e7aa-167836866817fbb33f-0"
       ],
       "custom_css": [
-
+        ".rich-text__wrapper {place-content: center;}"
       ],
       "settings": {
         "desktop_content_position": "center",
