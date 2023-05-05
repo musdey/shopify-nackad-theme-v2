@@ -216,8 +216,8 @@
         "template--16720618389735__3d18d0c6-8ab1-49ef-858d-f70e7071e7aa-167836866817fbb33f-0": {
           "type": "heading",
           "settings": {
-            "heading": "Jung. Brutal.                            Gutaussehend.",
-            "heading_size": "h1"
+            "heading": "Persönlich. Zuverlässig. Kompetent.",
+            "heading_size": "h0"
           }
         }
       },
@@ -243,8 +243,8 @@
         "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-2": {
           "type": "button",
           "settings": {
-            "button_label": "06603556067",
-            "button_link": ""
+            "button_label": "0677 64894131",
+            "button_link": "tel:+4367764894131"
           }
         }
       },
@@ -256,8 +256,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/PXL_20221015_160751139_2.jpg",
-        "height": "medium",
-        "desktop_image_width": "medium",
+        "height": "small",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
