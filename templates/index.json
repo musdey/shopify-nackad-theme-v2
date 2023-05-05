@@ -243,13 +243,21 @@
         "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-2": {
           "type": "button",
           "settings": {
-            "button_label": "0677 64894131",
+            "button_label": "📞 0677 648 941 31",
             "button_link": "tel:+4367764894131"
+          }
+        },
+        "a135239a-3fd4-44e2-8587-311f652482ce": {
+          "type": "button",
+          "settings": {
+            "button_label": "✉️ info@nackad.at",
+            "button_link": "mailto:info@nackad.at"
           }
         }
       },
       "block_order": [
-        "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-2"
+        "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-2",
+        "a135239a-3fd4-44e2-8587-311f652482ce"
       ],
       "custom_css": [
         "h2 {margin: 0 auto; margin-bottom: 25px;}"
