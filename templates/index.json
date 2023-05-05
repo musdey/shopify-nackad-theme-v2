@@ -199,6 +199,9 @@
         "template--16720618389735__96f55da3-d44b-410c-b40c-eae69e814da4-1678368781f3d7fefb-1",
         "template--16720618389735__96f55da3-d44b-410c-b40c-eae69e814da4-1678368781f3d7fefb-2"
       ],
+      "custom_css": [
+        "rich-text__wrapper {place-content: center;}"
+      ],
       "settings": {
         "color_scheme": "background-2",
         "full_width": true,
@@ -219,6 +222,9 @@
       },
       "block_order": [
         "template--16720618389735__3d18d0c6-8ab1-49ef-858d-f70e7071e7aa-167836866817fbb33f-0"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -242,6 +248,9 @@
       },
       "block_order": [
         "template--16720618389735__a1a28344-444a-4790-8583-0a6afdc9ad5f-16783678102e005d68-2"
+      ],
+      "custom_css": [
+        "h2 {margin: 0 auto; margin-bottom: 25px;}"
       ],
       "settings": {
         "height": "adapt",
