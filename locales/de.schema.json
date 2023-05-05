@@ -1234,6 +1234,18 @@
             }
           }
         },
+        "button2": {
+          "name": "Schaltfläche",
+          "settings": {
+            "button_label": {
+              "label": "Schaltflächenbeschriftung",
+              "info": "Lasse die Beschriftung leer, um die Schaltfläche auszublenden."
+            },
+            "button_link": {
+              "label": "Schaltflächenlink"
+            }
+          }
+        },
         "caption": {
           "name": "Bildtext",
           "settings": {
