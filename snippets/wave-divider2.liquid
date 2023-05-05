@@ -1,5 +1,5 @@
-<div
-  style="
+<style>
+  .outerdiv{
     max-width: 90%;
     margin: 0 auto;
     margin-top: -150px;
@@ -7,8 +7,28 @@
     display: block;
     position: relative;
     z-index: 1;
-  "
->
+  }
+
+    @media screen and (min-width: 1500px) {
+        .outerdiv {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        margin-top: -200px;
+      }
+    }
+
+    @media screen and (max-width: 750px){
+          .outerdiv {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        margin-top: -25px;
+      }
+    }
+</style>
+
+<div class="outerdiv">
   <svg
     preserveAspectRatio="none"
     width="100%"
