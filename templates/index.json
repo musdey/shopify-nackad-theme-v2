@@ -30,6 +30,9 @@
         "template--16720618389735__7d871986-74fe-4c43-a63c-d8e0930461e8-16783678102e005d68-1",
         "template--16720618389735__7d871986-74fe-4c43-a63c-d8e0930461e8-16783678102e005d68-2"
       ],
+      "custom_css": [
+        ".image-with-text__media {border-width: 0px;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/einkaufstasche.png",
         "height": "adapt",
