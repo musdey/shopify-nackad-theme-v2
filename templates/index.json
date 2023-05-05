@@ -59,7 +59,7 @@
         "template--16749473661159__b606ca18-bd79-4a80-8d1d-35a3588573a2-16830582286bb77f16-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/glas_transparent.png",
+            "image": "shopify:\/\/shop_images\/Glasses.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -69,7 +69,7 @@
         "template--16749473661159__b606ca18-bd79-4a80-8d1d-35a3588573a2-16830582286bb77f16-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/so-funktioniert_s.png",
+            "image": "shopify:\/\/shop_images\/sofunkts.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -101,7 +101,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 2,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
