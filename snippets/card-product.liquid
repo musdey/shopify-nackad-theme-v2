@@ -22,11 +22,22 @@
 
 {% style %}
 
+.productname {
+  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #313131;
+    font-weight: 700;
+    height: 34px;
+}
+
 .cartAmount {
     background: var(--gradient-base-accent-1);
     color : white;
     opacity: 1;
     border-radius: 25px;
+    float:right;
   }
 
   .addButton {
@@ -56,7 +67,7 @@
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
+      padding-top: {{ section.settings.padding_top }}px;  
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
@@ -65,6 +76,7 @@
   background: linear-gradient(to bottom, rgb(255 255 255), rgb(255, 227, 227));
     padding: 10px;
     border-radius: 20px;
+    box-shadow: 2px 3px #00000024;
 }
 
 {% endstyle%}
@@ -165,8 +177,8 @@
           {% endif %}
         </div>
       </div>
-        <div class="card__content">
-          <div class="card__information">
+        <div style="display: block;" class="card__content">
+          <div class="card__information" style="padding-bottom: 0px;">
             <h3
               class="card__heading"
               {% if card_product.featured_media == null and settings.card_style == 'standard' %}
@@ -183,7 +195,7 @@
               </a>
             </h3>
           </div>
-          <div class="card__badge {{ settings.badge_position }}">
+          <div style="text-align: right !important" class="card__badge {{ settings.badge_position }}">
             {%- if card_product.available == false -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -202,8 +214,12 @@
           </div>
         </div>
       </div>
-      <div class="card__content">
-        <div class="card__information">
+      <div   style="display: block;"class="card__content">
+        <div class="card__information" style="padding-bottom: 0px;">
+          {%- if show_vendor -%}
+            <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+            <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
+          {%- endif -%}
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -213,17 +229,13 @@
             <a
               href="{{ card_product.url }}"
               id="CardLink-{{ section_id }}-{{ card_product.id }}"
-              class="full-unstyled-link"
+              class="productname full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
               {{ card_product.title | escape }}
             </a>
           </h3>
           <div class="card-information">
-            {%- if show_vendor -%}
-              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-              <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
-            {%- endif -%}
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
@@ -267,7 +279,11 @@
           </div>
         </div>
         {%- if show_quick_add -%}
-          {% comment %} <div class="quick-add no-js-hidden">
+          <div class="quick-add no-js-hidden" style="display: flex; justify-content: space-between;">
+            <div style="display: flex; flex-flow: column; font-size: 12px; width: 50%;">
+              <a style="white-space: nowrap; overflow: hidden;"> {{ card_product.metafields.my_fields.herkunft }}</a>
+              <a style="white-space: nowrap; overflow: hidden;"> {{ card_product.metafields.my_fields.verpackung }}</a>
+            </div>
             {%- liquid
               assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
               assign qty_rules = false
@@ -303,27 +319,9 @@
                   </div>
                 </button>
               </modal-opener>
-              <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal">
-                <div
-                  role="dialog"
-                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}"
-                  aria-modal="true"
-                  class="quick-add-modal__content global-settings-popup"
-                  tabindex="-1"
-                >
-                  <button
-                    id="ModalClose-{{ card_product.id }}"
-                    type="button"
-                    class="quick-add-modal__toggle"
-                    aria-label="{{ 'accessibility.close' | t }}"
-                  >
-                    {% render 'icon-close' %}
-                  </button>
-                  <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info"></div>
-                </div>
-              </quick-add-modal>
+
             {%- else -%}
-              <product-form>
+              <product-form style="width: 50%; text-align: -webkit-right;">
                 {%- form 'product',
                   card_product,
                   id: product_form_id,
@@ -352,16 +350,17 @@
                   >
                     <span>
                       {%- if card_product.selected_or_first_available_variant.available -%}
-                        {{ 'products.product.add_to_cart' | t }}
+                        {% render 'icon-plus' %}
+                        {% comment %} {{ 'products.product.add_to_cart' | t }} {% endcomment %}
                       {%- else -%}
-                        {{ 'products.product.sold_out' | t }}
+                        {% comment %} {{ 'products.product.sold_out' | t }} {% endcomment %}
                       {%- endif -%}
                     </span>
                     <span class="sold-out-message hidden">
                       {{ 'products.product.sold_out' | t }}
                     </span>
-                    {%- if horizontal_quick_add -%}
-                      <span class="icon-wrap">{% render 'icon-plus' %}</span>
+                    {%- if true -%}
+                      <span class="icon-wrap" style="width:20px; margin: unset;">{% render 'icon-plus' %}</span>
                     {%- endif -%}
                     <div class="loading-overlay__spinner hidden">
                       <svg
@@ -378,41 +377,9 @@
                 {%- endform -%}
               </product-form>
             {%- endif -%}
-          </div> {% endcomment %}
-          <quantity-input class="cartAmount quantity cart-quantity" >
-            <button class="addButton quantity__button no-js-hidden" name="minus" type="button">
-              <span class="visually-hidden">
-                {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
-              </span>
-              {% render 'icon-minus' %}
-            </button>
-            <input
-              class="quantity__input"
-              data-quantity-variant-id="{{ item.variant.id }}"
-              type="number"
-              name="updates[]"
-              value="{{ item.quantity }}"
-              {% # theme-check-disable %}
-              data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
-              min="{{ item.variant.quantity_rule.min }}"
-              {% if item.variant.quantity_rule.max != null %}
-                max="{{ item.variant.quantity_rule.max }}"
-              {% endif %}
-              step="{{ item.variant.quantity_rule.increment }}"
-              {% # theme-check-enable %}
-              aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
-              id="Quantity-{{ item.index | plus: 1 }}"
-              data-index="{{ item.index | plus: 1 }}"
-            >
-            <button class="addButton quantity__button no-js-hidden" name="plus" type="button">
-              <span class="visually-hidden">
-                {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
-              </span>
-              {% render 'icon-plus' %}
-            </button>
-          </quantity-input>
+          </div> 
         {%- endif -%}
-        <div class="card__badge {{ settings.badge_position }}">
+        <div style="text-align: right !important" class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
             <span
               id="Badge-{{ section_id }}-{{ card_product.id }}"
@@ -451,9 +418,9 @@
         style="--ratio-percent: 100%;"
       >
         <div class="card__content">
-          <div class="card__information">
+          <div class="card__information" style="padding-bottom: 0px;">
             <h3 class="card__heading">
-              <a role="link" aria-disabled="true" class="full-unstyled-link">
+              <a role="link" aria-disabled="true" class="productname full-unstyled-link">
                 {{ 'onboarding.product_title' | t }}
               </a>
             </h3>
@@ -461,7 +428,7 @@
         </div>
       </div>
       <div class="card__content">
-        <div class="card__information">
+        <div class="card__information" style="padding-bottom: 0px;">
           <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
               {{ 'onboarding.product_title' | t }}

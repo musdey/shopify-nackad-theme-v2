@@ -115,6 +115,12 @@
       </aside>
     {%- endif -%}
 
+    <div class=" facets-vertical page-width">
+      {% if template contains 'collection' %}
+        {% render 'sidebar-collection' %}
+      {% endif %}
+    </aside>
+
     <div class="product-grid-container" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
         {%- if collection.products.size == 0 -%}

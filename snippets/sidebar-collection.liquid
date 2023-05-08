@@ -1,0 +1,45 @@
+<style>
+
+    .sideBarContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subNavSideBar {
+        text-decoration-line: none;
+        height: fit-content;
+        padding-inline: 10px;
+        padding-top: 20px;
+        font-weight: 700;
+        font-size: larger;
+        color: var(--gradient-base-accent-2);
+    }
+</style>
+
+<div class="sideBarContainer medium-hide large-up-hide">
+    <a class="subNavSideBar"> {{collection.title}} </a>
+</div>
+<div class="sideBarContainer small-hide">
+
+    {% for collection in collections %}
+        {% if collection.description contains "top" %}
+            <a class="subNavSideBar" href="{{collection.url}}"> {{collection.title}} </a>
+        {% endif %}
+      {% endfor %}
+
+  </div>
+  <script>
+    console.log({{ collection | json }})
+    console.log({{ collections | json }})
+    if(window.location.pathname != "/"){
+        var subnavs = document.getElementsByClassName("subNavSideBar")
+    
+        for(var i = 0; i < subnavs.length; i++) {
+            if (subnavs[i].href.includes(window.location.pathname)) {
+                subnavs[i].style.textDecoration = "underline";
+                subnavs[i].style.textDecorationThickness = "4px";
+            }
+        }
+    }
+
+</script>
