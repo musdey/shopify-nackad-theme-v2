@@ -98,6 +98,18 @@
 
             <tbody>
               {%- for item in cart.items -%}
+
+                {% assign pfand = item.product.metafields.my_fields.pfand | split: "-" %}
+                {% assign pfandmulti = pfand.last | times : item.quantity %}
+                {% capture pfandgesamt%} {{pfandgesamt | plus: pfandmulti }} {% endcapture %}
+
+                {% if item.variant_id == 42761313222903 %}
+
+                    {% assign exists = true %}
+                    {% assign pfandindex = forloop.index %}
+                    {% assign pfandobjamount = item.quantity %}
+                {% endif %}  
+
                 <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                   <td class="cart-item__media">
                     {% if item.image %}
@@ -255,7 +267,7 @@
                       {%- endif -%}
                     </div>
                   </td>
-
+                  {% if item.variant_id != 42761313222903 %}
                   <td class="cart-item__quantity">
                     <div class="cart-item__quantity-wrapper">
                       <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
@@ -327,6 +339,8 @@
                       </svg>
                     </div>
                   </td>
+					      {% endif %}
+
 
                   <td class="cart-item__totals right small-hide">
                     <div class="loading-overlay hidden">
@@ -391,12 +405,48 @@
       </div>
     </div>
 
+    <script> 
+      console.log("pfandobjamount",{{pfandobjamount}})
+      console.log("pfandgesamt",{{pfandgesamt}})
+      console.log("exists",{{exists}})
+      console.log("pfandindex",{{pfandindex}})
+    </script>
+    
+    {% if exists == true %}
+      {% if pfandgesamt == 0 %}
+        <script>
+          console.log("pfand entfernt");
+          jQuery.get("/cart/change?line={{ pfandindex }}&amp;quantity=0");
+        </script>
+      {% endif %}  
+
+      {% if pfandobjamount != 1 %}
+        <script>
+          console.log("pfand auf 1 reduziert");
+          jQuery.get("/cart/change?line={{ pfandindex }}&amp;quantity=1");
+        </script>
+      {% endif %}
+
+    {% else %} 
+      {%if pfandgesamt != 0 %}
+      <script>
+          console.log("pfand hinzugefügt");
+          jQuery.post('/cart/add.js', { items: [ { quantity: 1, id: 42761313222903, selling_plan:1713537271 } ] });
+      </script>
+      {% endif %}
+    {% endif %}
+
     <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
     <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">
       {{ 'accessibility.loading' | t }}
     </p>
   </form>
 </cart-items>
+<div style="text-align: right; margin: 0 auto; padding: 0 5rem; max-width: var(--page-width);">
+  <a class="shopping-checkout" style="font-size:13px;">
+    Pfand der verrechnet wird, wenn nicht zurückgegeben: {{ pfandgesamt | money }}
+  </a>
+</div>
 
 {% schema %}
 {

@@ -70,9 +70,9 @@
                   onclick="openPopup()"
                   class="cart__checkout-button button"
                   name="delivery-slot"
-                  {%comment%}
-                  Check if cart is below order value
-                  {%endcomment%}
+                  {% if cart.total_price < 1490 %}
+                    disabled
+                  {% endif %}
                   {% if cart == empty %}
                     disabled
                   {% endif %}
@@ -80,6 +80,9 @@
                   {{ 'sections.cart.checkout' | t }}
                 </button>
               </div>
+              {% if cart.total_price < 1490 %}
+                <p> Mindestbestellmenge von 14,90€ nicht erreicht! </p>
+              {% endif %}
 
               {% comment %} {%- if additional_checkout_buttons -%}
                 <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
