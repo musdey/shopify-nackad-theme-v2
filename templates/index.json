@@ -21,7 +21,7 @@
           "type": "button",
           "settings": {
             "button_label": "Einkauf Starten",
-            "button_link": "shopify:\/\/collections"
+            "button_link": "shopify:\/\/collections\/speisekammer"
           }
         }
       },
