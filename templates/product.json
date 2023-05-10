@@ -63,7 +63,7 @@
         "31c712fc-2075-4b44-aacb-0dc2470377dc": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<span style=\"price-item price-item--regular\">{{ product.price | money }}<\/span> \ninkl. MwSt.     (\n{% if product.variants[0].unit_price_measurement %}\n      {{ product.variants[0].unit_price | money }}\n      {% if product.variants[0].unit_price_measurement.reference_value != 1 %}\n        {{ product.variants[0].unit_price_measurement.reference_value }}\n      {% endif %}\/\n      {{ product.variants[0].unit_price_measurement.reference_unit }}\n    {% else %}\n      pro Stk\n    {% endif %} )"
+            "custom_liquid": "<span class=\"price-item price-item--regular\">{{ product.price | money }}<\/span> \ninkl. MwSt.     (\n{% if product.variants[0].unit_price_measurement %}\n      {{ product.variants[0].unit_price | money }}\n      {% if product.variants[0].unit_price_measurement.reference_value != 1 %}\n        {{ product.variants[0].unit_price_measurement.reference_value }}\n      {% endif %}\/\n      {{ product.variants[0].unit_price_measurement.reference_unit }}\n    {% else %}\n      pro Stk\n    {% endif %} )"
           }
         },
         "47cdfa41-a3c2-4914-b05c-e87aafe8f3df": {
