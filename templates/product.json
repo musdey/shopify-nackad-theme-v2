@@ -1,30 +1,12 @@
 {
   "sections": {
-    "8cb02d00-b4a9-4f36-ae18-a0085da93c98": {
-      "type": "rich-text",
-      "blocks": {
-        "template--16720618750183__8cb02d00-b4a9-4f36-ae18-a0085da93c98-167836866817fbb33f-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "< Zurück zum Shop",
-            "button_link": "https:\/\/history.back()",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--16720618750183__8cb02d00-b4a9-4f36-ae18-a0085da93c98-167836866817fbb33f-2"
-      ],
+    "2addcdd6-0744-4921-b042-3b1464cb6c4a": {
+      "type": "custom-liquid",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
+        "custom_liquid": "<div style=\"padding: 20px;\"><button class=\"button button--secondary\"onclick=\"history.back()\"><- Zurück zur Übersicht<\/button><\/div>",
         "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "main": {
@@ -191,7 +173,7 @@
     }
   },
   "order": [
-    "8cb02d00-b4a9-4f36-ae18-a0085da93c98",
+    "2addcdd6-0744-4921-b042-3b1464cb6c4a",
     "main",
     "related-products"
   ]
