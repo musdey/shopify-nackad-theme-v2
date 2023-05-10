@@ -22,6 +22,23 @@
 
 {% style %}
 
+.plusButton {
+  color: white !important;
+  background: var(--gradient-base-accent-1);
+  border: none;
+  border-color: none;
+  height: fit-content !important;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.plusButton:after {
+  top: unset;
+  content: unset;
+  right: unset;
+  bottom: unset;
+  left: unset;
+}
+
 .productname {
   overflow: hidden;
     display: -webkit-box;
@@ -339,7 +356,7 @@
                     id="{{ product_form_id }}-submit"
                     type="submit"
                     name="add"
-                    class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
+                    class="plusButton quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
                     aria-haspopup="dialog"
                     aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                     aria-live="polite"
@@ -360,7 +377,7 @@
                       {{ 'products.product.sold_out' | t }}
                     </span>
                     {%- if true -%}
-                      <span class="icon-wrap" style="width:20px; margin: unset;">{% render 'icon-plus' %}</span>
+                      <span class="icon-wrap" style="width:20px; height:20px; margin: unset;">{% render 'icon-plus' %}</span>
                     {%- endif -%}
                     <div class="loading-overlay__spinner hidden">
                       <svg
