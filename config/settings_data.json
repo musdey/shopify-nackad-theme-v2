@@ -123,6 +123,13 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/nackad-logo-a.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_body_background_color": "#ffe3e3",
+    "checkout_accent_color": "#121212",
+    "checkout_button_color": "#1b615c",
+    "checkout_error_color": "#c26c6c",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
