@@ -415,24 +415,30 @@
     {% if exists == true %}
       {% if pfandgesamt == 0 %}
         <script>
-          console.log("pfand entfernt");
-          jQuery.get("/cart/change?line={{ pfandindex }}&amp;quantity=0");
+          document.addEventListener('DOMContentLoaded', function () {
+            console.log("pfand entfernt");
+            jQuery.get("/cart/change?line={{ pfandindex }}&amp;quantity=0");
+          });
         </script>
       {% endif %}  
 
       {% if pfandobjamount != 1 %}
         <script>
-          console.log("pfand auf 1 reduziert");
-          jQuery.get("/cart/change?line={{ pfandindex }}&amp;quantity=1");
+          document.addEventListener('DOMContentLoaded', function () {
+            console.log("pfand auf 1 reduziert");
+            jQuery.get("/cart/change?line={{ pfandindex }}&amp;quantity=1");
+          });
         </script>
       {% endif %}
 
     {% else %} 
       {%if pfandgesamt != 0 %}
       <script>
+        document.addEventListener('DOMContentLoaded', function () {
           console.log("pfand hinzugefügt");
           jQuery.post('/cart/add.js', { items: [ { quantity: 1, id: 42761313222903, selling_plan:1713537271 } ] });
-      </script>
+        });
+        </script>
       {% endif %}
     {% endif %}
 
