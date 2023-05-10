@@ -7,7 +7,7 @@
           "type": "button",
           "settings": {
             "button_label": "< Zurück zum Shop",
-            "button_link": "shopify:\/\/collections\/all",
+            "button_link": "https:\/\/history.back()",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
