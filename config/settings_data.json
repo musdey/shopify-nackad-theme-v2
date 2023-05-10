@@ -127,7 +127,8 @@
     "checkout_logo_position": "center",
     "checkout_logo_size": "large",
     "checkout_body_background_color": "#ffe3e3",
-    "checkout_accent_color": "#121212",
+    "checkout_input_background_color_mode": "transparent",
+    "checkout_accent_color": "#1b615c",
     "checkout_button_color": "#519e99",
     "checkout_error_color": "#c26c6c",
     "sections": {
