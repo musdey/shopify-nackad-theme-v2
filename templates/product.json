@@ -66,11 +66,10 @@
             "text_style": "subtitle"
           }
         },
-        "a0545738-000f-4e51-908d-e898f4480219": {
-          "type": "text",
+        "8dd0c944-7940-4def-9895-a01f4d81f1c5": {
+          "type": "custom_liquid",
           "settings": {
-            "text": "<strong>Pfand:<\/strong> {{ product.metafields.my_fields.pfand.value }}",
-            "text_style": "subtitle"
+            "custom_liquid": "<strong> Pfand: <\/strong> {{ product.metafields.my_fields.pfand.value | split:\"-\" | last | money }}"
           }
         },
         "variant_picker": {
@@ -140,7 +139,7 @@
         "caption",
         "price",
         "47cdfa41-a3c2-4914-b05c-e87aafe8f3df",
-        "a0545738-000f-4e51-908d-e898f4480219",
+        "8dd0c944-7940-4def-9895-a01f4d81f1c5",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
