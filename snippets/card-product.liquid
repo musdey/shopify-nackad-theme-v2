@@ -125,8 +125,9 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div
+        onclick="location.href='{{ card_product.url }}';"
         class="card__inner {% if settings.card_style == 'standard' %}{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
-        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%; cursor: pointer;"
       >
         {%- if card_product.featured_media -%}
           <div class="card__media" style="mix-blend-mode: darken;">
@@ -414,6 +415,7 @@
           {%- endif -%}
         </div>
       </div>
+    </a>
     </div>
   </div>
 {%- else -%}
