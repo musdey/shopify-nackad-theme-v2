@@ -257,7 +257,12 @@
         </div>
       </div>
     </div>
-    <input style="display: none;" type="text" name="attributes[deposit]" value="{{ pfandgesamt }}" />
+    <input id="depositinput" style="display: none;" type="text" name="attributes[deposit]" />
+    <script>
+      var deposit = document.getElementById("depositinput");
+      deposit.value = window.pfandgesamt;
+    </script>
+  
 
     <div class="button-container">
       <button type="button" onclick="closePopup()"class="cart__checkout-button button" style="background:#DC9393; margin: 1px;">
