@@ -4,14 +4,13 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "disabled": true,
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Für kurze Zeit geschlossen! Wir sind bald wieder für euch zurück!",
             "text_alignment": "center",
-            "color_scheme": "background-1",
+            "color_scheme": "inverse",
             "link": ""
           }
         }
@@ -19,7 +18,8 @@
       "block_order": [
         "announcement-bar-0"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "header": {
       "type": "header",
@@ -43,7 +43,9 @@
     },
     "17e0c65b-8136-4a71-85c1-cdb1ea2e8b0a": {
       "type": "custom-liquid",
-      "custom_css": [],
+      "custom_css": [
+
+      ],
       "settings": {
         "custom_liquid": "{% render 'custom-subheader' %}",
         "color_scheme": "background-2",
